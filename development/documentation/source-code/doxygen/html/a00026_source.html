@@ -1,0 +1,135 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>&quot;Πρόγραμμα Διαχείρισης Ιατρείου&quot;: Αρχείο κώδικα eksetaseis_form.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- Δημιουργήθηκε από  Doxygen 1.6.1 -->
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul>
+      <li><a href="index.html"><span>Κύρια&nbsp;Σελίδα</span></a></li>
+      <li><a href="annotated.html"><span>Κλάσεις</span></a></li>
+      <li class="current"><a href="files.html"><span>Αρχεία</span></a></li>
+    </ul>
+  </div>
+  <div class="tabs">
+    <ul>
+      <li><a href="files.html"><span>Λίστα&nbsp;Αρχείων</span></a></li>
+      <li><a href="globals.html"><span>Μέλη&nbsp;Αρχείων</span></a></li>
+    </ul>
+  </div>
+<h1>eksetaseis_form.h</h1><a href="a00026.html">Πήγαινε στην τεκμηρίωση του αρχείου.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="comment">/*</span>
+<a name="l00002"></a>00002 <span class="comment"> * Copyright (C) 2009 Geeks Developers.</span>
+<a name="l00003"></a>00003 <span class="comment"> *</span>
+<a name="l00004"></a>00004 <span class="comment"> * This program is free software: you can redistribute it and/or modify</span>
+<a name="l00005"></a>00005 <span class="comment"> * it under the terms of the GNU General Public License as published by</span>
+<a name="l00006"></a>00006 <span class="comment"> * the Free Software Foundation, either version 3 of the License, or</span>
+<a name="l00007"></a>00007 <span class="comment"> * (at your option) any later version.</span>
+<a name="l00008"></a>00008 <span class="comment"> *</span>
+<a name="l00009"></a>00009 <span class="comment"> * This program is distributed in the hope that it will be useful,</span>
+<a name="l00010"></a>00010 <span class="comment"> * but WITHOUT ANY WARRANTY; without even the implied warranty of</span>
+<a name="l00011"></a>00011 <span class="comment"> * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the</span>
+<a name="l00012"></a>00012 <span class="comment"> * GNU General Public License for more details.</span>
+<a name="l00013"></a>00013 <span class="comment"> *</span>
+<a name="l00014"></a>00014 <span class="comment"> * You should have received a copy of the GNU General Public License</span>
+<a name="l00015"></a>00015 <span class="comment"> * along with this program.  If not, see &lt;http://www.gnu.org/licenses/&gt;.</span>
+<a name="l00016"></a>00016 <span class="comment"> */</span>
+<a name="l00017"></a>00017 
+<a name="l00018"></a>00018 <span class="preprocessor">#ifndef eksetaseis_formH</span>
+<a name="l00019"></a>00019 <span class="preprocessor"></span><span class="preprocessor">#define eksetaseis_formH</span>
+<a name="l00020"></a>00020 <span class="preprocessor"></span>
+<a name="l00021"></a>00021 <span class="preprocessor">#include &lt;Classes.hpp&gt;</span>
+<a name="l00022"></a>00022 <span class="preprocessor">#include &lt;Controls.hpp&gt;</span>
+<a name="l00023"></a>00023 <span class="preprocessor">#include &lt;StdCtrls.hpp&gt;</span>
+<a name="l00024"></a>00024 <span class="preprocessor">#include &lt;Forms.hpp&gt;</span>
+<a name="l00025"></a>00025 <span class="preprocessor">#include &lt;ExtCtrls.hpp&gt;</span>
+<a name="l00026"></a>00026 <span class="preprocessor">#include &lt;jpeg.hpp&gt;</span>
+<a name="l00027"></a>00027 <span class="preprocessor">#include &quot;<a class="code" href="a00021.html">button_frame.h</a>&quot;</span>
+<a name="l00028"></a>00028 <span class="preprocessor">#include &lt;ADODB.hpp&gt;</span>
+<a name="l00029"></a>00029 <span class="preprocessor">#include &lt;DB.hpp&gt;</span>
+<a name="l00030"></a>00030 <span class="preprocessor">#include &lt;DBCtrls.hpp&gt;</span>
+<a name="l00031"></a>00031 <span class="preprocessor">#include &lt;Mask.hpp&gt;</span>
+<a name="l00032"></a>00032 
+<a name="l00033"></a><a class="code" href="a00004.html">00033</a> <span class="keyword">class </span><a class="code" href="a00004.html">TDiagnwseisForm</a> : <span class="keyword">public</span> TForm
+<a name="l00034"></a>00034 {
+<a name="l00035"></a>00035 __published:
+<a name="l00036"></a><a class="code" href="a00004.html#afc1aa02348abe045d178f8c9ce8388dc">00036</a>         TDBNavigator *<a class="code" href="a00004.html#afc1aa02348abe045d178f8c9ce8388dc">DBNavigatorDiagnwshs</a>;
+<a name="l00037"></a><a class="code" href="a00004.html#a74b2d9c7eae4991124cecedee3491359">00037</a>         TImage *<a class="code" href="a00004.html#a74b2d9c7eae4991124cecedee3491359">BackgroundImage</a>;
+<a name="l00038"></a><a class="code" href="a00004.html#afd0341c7bf1e7f1aeef8764844ce9b30">00038</a>         <a class="code" href="a00003.html">TButtonFrame</a> *<a class="code" href="a00004.html#afd0341c7bf1e7f1aeef8764844ce9b30">HomeButton</a>;
+<a name="l00039"></a><a class="code" href="a00004.html#aeeed5c8e2f43e0609699b6ef39bb2dfc">00039</a>         TTimer *<a class="code" href="a00004.html#aeeed5c8e2f43e0609699b6ef39bb2dfc">Timer</a>;
+<a name="l00040"></a>00040 
+<a name="l00041"></a><a class="code" href="a00004.html#a657c9802adb38306be7d2564a74d1daa">00041</a>         TLabel *<a class="code" href="a00004.html#a657c9802adb38306be7d2564a74d1daa">SectionTitle</a>;
+<a name="l00042"></a><a class="code" href="a00004.html#a3b667e689faf34ec098af503cb28ba4a">00042</a>         TLabel *<a class="code" href="a00004.html#a3b667e689faf34ec098af503cb28ba4a">SelectAsthenhLabel</a>;
+<a name="l00043"></a><a class="code" href="a00004.html#a2c7c81710e2f8225a686c200fa662850">00043</a>         TLabel *<a class="code" href="a00004.html#a2c7c81710e2f8225a686c200fa662850">SelectEpiskepshLabel</a>;
+<a name="l00044"></a><a class="code" href="a00004.html#a97738bb6d91d3ada505fced89aa73f3d">00044</a>         TLabel *<a class="code" href="a00004.html#a97738bb6d91d3ada505fced89aa73f3d">SelectAstheneiaLabel</a>;
+<a name="l00045"></a><a class="code" href="a00004.html#a834a4aefda16637440fcc9a1c77db5e5">00045</a>         TLabel *<a class="code" href="a00004.html#a834a4aefda16637440fcc9a1c77db5e5">LabelKostos</a>;
+<a name="l00046"></a><a class="code" href="a00004.html#aa52901bd70ccf28a6d3657d54b122ea2">00046</a>         TLabel *<a class="code" href="a00004.html#aa52901bd70ccf28a6d3657d54b122ea2">SearchLabel</a>;
+<a name="l00047"></a><a class="code" href="a00004.html#a669119a2a6d913a0073518f6f3492137">00047</a>         TLabel *<a class="code" href="a00004.html#a669119a2a6d913a0073518f6f3492137">EuroLabel</a>;
+<a name="l00048"></a>00048 
+<a name="l00049"></a><a class="code" href="a00004.html#a6d4b46210a03f5774d30e28691df4235">00049</a>         TImage *<a class="code" href="a00004.html#a6d4b46210a03f5774d30e28691df4235">RightImageArrow1</a>;
+<a name="l00050"></a><a class="code" href="a00004.html#a85b74bc67e47fd64cdba15e2de603918">00050</a>         TImage *<a class="code" href="a00004.html#a85b74bc67e47fd64cdba15e2de603918">RightImageArrow2</a>;
+<a name="l00051"></a><a class="code" href="a00004.html#ac6195da697a427a75056b209a51b4729">00051</a>         TImage *<a class="code" href="a00004.html#ac6195da697a427a75056b209a51b4729">DownImageArrow</a>;
+<a name="l00052"></a>00052 
+<a name="l00053"></a><a class="code" href="a00004.html#a7b39a8b5cd81fe954e4018dd6238b771">00053</a>         TDBLookupComboBox *<a class="code" href="a00004.html#a7b39a8b5cd81fe954e4018dd6238b771">SelectAsthenhDBLookupComboBox</a>;
+<a name="l00054"></a><a class="code" href="a00004.html#ad4b527a1996b43236e6284f7947f4d62">00054</a>         TDBLookupComboBox *<a class="code" href="a00004.html#ad4b527a1996b43236e6284f7947f4d62">SelectAstheneiaDBLookupComboBox</a>;
+<a name="l00055"></a><a class="code" href="a00004.html#af347c73d3612bdba0b4eb76a0630f1db">00055</a>         TDBLookupComboBox *<a class="code" href="a00004.html#af347c73d3612bdba0b4eb76a0630f1db">SelectEpiskepshDBLookupComboBox</a>;
+<a name="l00056"></a>00056 
+<a name="l00057"></a><a class="code" href="a00004.html#a4c854f59331be8d573682ad29bc1b0ee">00057</a>         TADOQuery *<a class="code" href="a00004.html#a4c854f59331be8d573682ad29bc1b0ee">ADOQueryEpiskepseis</a>;
+<a name="l00058"></a><a class="code" href="a00004.html#a4ca2e0b41a1ec3654f9566fb385337e9">00058</a>         TADOQuery *<a class="code" href="a00004.html#a4ca2e0b41a1ec3654f9566fb385337e9">ADOQueryDiagnwsh</a>;
+<a name="l00059"></a><a class="code" href="a00004.html#a8f874fcfbf5bef7b0c3af0d42a7b3b57">00059</a>         TADOQuery *<a class="code" href="a00004.html#a8f874fcfbf5bef7b0c3af0d42a7b3b57">ADOQueryAstheneies</a>;
+<a name="l00060"></a><a class="code" href="a00004.html#a659130f9c62ea2ef7d3a2c8814dfd590">00060</a>         TADOQuery *<a class="code" href="a00004.html#a659130f9c62ea2ef7d3a2c8814dfd590">ADOQueryAstheneis</a>;
+<a name="l00061"></a>00061 
+<a name="l00062"></a><a class="code" href="a00004.html#abfae7c27af2663c6dc72f6db05ad66e8">00062</a>         TDataSource *<a class="code" href="a00004.html#abfae7c27af2663c6dc72f6db05ad66e8">DataSourceEpiskepseis</a>;
+<a name="l00063"></a><a class="code" href="a00004.html#a8d583f389a27b9565fa36e1f8b444a26">00063</a>         TDataSource *<a class="code" href="a00004.html#a8d583f389a27b9565fa36e1f8b444a26">DataSourceAstheneies</a>;
+<a name="l00064"></a><a class="code" href="a00004.html#a4718515e3c5215a1cb7f902657e4af9c">00064</a>         TDataSource *<a class="code" href="a00004.html#a4718515e3c5215a1cb7f902657e4af9c">DataSourceDiagnwsh</a>;
+<a name="l00065"></a><a class="code" href="a00004.html#af9a72caaed5328e51fd75adabe23f9b9">00065</a>         TDataSource *<a class="code" href="a00004.html#af9a72caaed5328e51fd75adabe23f9b9">DataSourceAstheneis</a>;
+<a name="l00066"></a>00066 
+<a name="l00067"></a><a class="code" href="a00004.html#a706d7a91d6c6df6c882fbf21e24c44b5">00067</a>         TDBEdit *<a class="code" href="a00004.html#a706d7a91d6c6df6c882fbf21e24c44b5">KwdikosAstheneiasDBEdit</a>;
+<a name="l00068"></a><a class="code" href="a00004.html#a4b57471d8a8466572fe896290bdba1f6">00068</a>         TDBEdit *<a class="code" href="a00004.html#a4b57471d8a8466572fe896290bdba1f6">KwdikosEpiskepshsDBEdit</a>;
+<a name="l00069"></a><a class="code" href="a00004.html#a4c02f531fac837736069103f4bd7de0f">00069</a>         TDBEdit *<a class="code" href="a00004.html#a4c02f531fac837736069103f4bd7de0f">KostosDBEdit</a>;
+<a name="l00070"></a><a class="code" href="a00004.html#acab2db9f319bb14e99822dbb2ca5fd6d">00070</a>         TDBEdit *<a class="code" href="a00004.html#acab2db9f319bb14e99822dbb2ca5fd6d">KwdikosDiagnwshsDBEdit</a>;
+<a name="l00071"></a>00071 
+<a name="l00072"></a><a class="code" href="a00004.html#acb1cf11d31d094e7e752161898bd3db5">00072</a>         TEdit *<a class="code" href="a00004.html#acb1cf11d31d094e7e752161898bd3db5">SearchEdit</a>;
+<a name="l00073"></a>00073                                 
+<a name="l00074"></a><a class="code" href="a00004.html#a2d02f8e267db0f9c8fd66f4e3ca74ab3">00074</a>         TStringField *<a class="code" href="a00004.html#a2d02f8e267db0f9c8fd66f4e3ca74ab3">ADOQueryAstheneiesonomasia</a>;
+<a name="l00075"></a><a class="code" href="a00004.html#a52623011133a5e94ee9fe2b3b46bee88">00075</a>         TStringField *<a class="code" href="a00004.html#a52623011133a5e94ee9fe2b3b46bee88">ADOQueryAstheneiskwdikos_asthenh</a>;
+<a name="l00076"></a><a class="code" href="a00004.html#a62aebfb787160c87d495f3d742a3f15c">00076</a>         TStringField *<a class="code" href="a00004.html#a62aebfb787160c87d495f3d742a3f15c">ADOQueryAstheneisepilogh_listas</a>;
+<a name="l00077"></a>00077 
+<a name="l00078"></a><a class="code" href="a00004.html#aa8b68f203dec6f25908bf732abcc702b">00078</a>         TLargeintField *<a class="code" href="a00004.html#aa8b68f203dec6f25908bf732abcc702b">ADOQueryAstheneieskwdikos_astheneias</a>;
+<a name="l00079"></a>00079 
+<a name="l00080"></a>00080         <span class="keywordtype">void</span> __fastcall <a class="code" href="a00004.html#aa4b7362515468eaa5aae37779b0b5a45">HomeButtonButtonCollisionAreaClick</a>(TObject *Sender);
+<a name="l00081"></a>00081         <span class="keywordtype">void</span> __fastcall <a class="code" href="a00004.html#a6075f41766f7325e8f4d0ab239a0f2d4">SelectAsthenhDBLookupComboBoxClick</a>(TObject *Sender);
+<a name="l00082"></a>00082         <span class="keywordtype">void</span> __fastcall <a class="code" href="a00004.html#a3ddea5d9c5914436ab4cf8ea8a6e656d">SelectEpiskepshDBLookupComboBoxClick</a>(TObject *Sender);
+<a name="l00083"></a>00083         <span class="keywordtype">void</span> __fastcall <a class="code" href="a00004.html#adb7504e03c63643d5ac07c4d80e8f511">SelectAstheneiaDBLookupComboBoxClick</a>(TObject *Sender);
+<a name="l00084"></a>00084 
+<a name="l00085"></a>00085         <span class="keywordtype">void</span> __fastcall <a class="code" href="a00004.html#a811bb0d60b43928eca56e02ee89c21c1">DBNavigatorDiagnwshsClick</a>(TObject *Sender,
+<a name="l00086"></a>00086                                                   TNavigateBtn Button);
+<a name="l00087"></a>00087 
+<a name="l00088"></a>00088         <span class="keywordtype">void</span> __fastcall <a class="code" href="a00004.html#a633abb3b469fea482be709c2865be4a6">TimerTimer</a>(TObject *Sender);
+<a name="l00089"></a>00089 
+<a name="l00090"></a>00090         <span class="keywordtype">void</span> __fastcall <a class="code" href="a00004.html#a8349e803b134b9c3e5514e70d1047982">ADOQueryDiagnwshDeleteError</a>(TDataSet *DataSet,
+<a name="l00091"></a>00091                                                     EDatabaseError *E,
+<a name="l00092"></a>00092                                                     TDataAction &amp;Action);
+<a name="l00093"></a>00093 
+<a name="l00094"></a>00094         <span class="keywordtype">void</span> __fastcall <a class="code" href="a00004.html#a9df22deaffc9229ca47eca4bbe797247">ADOQueryDiagnwshBeforeDelete</a>(TDataSet *DataSet);
+<a name="l00095"></a>00095         <span class="keywordtype">void</span> __fastcall <a class="code" href="a00004.html#a0d8b8724e85eb111d575472177f34e15">ADOQueryDiagnwshBeforePost</a>(TDataSet *DataSet);
+<a name="l00096"></a>00096         <span class="keywordtype">void</span> __fastcall <a class="code" href="a00004.html#ad156d746a24bb374b77efcc5bbfaa56b">SearchEditChange</a>(TObject *Sender);
+<a name="l00097"></a>00097 
+<a name="l00098"></a>00098 <span class="keyword">private</span>:
+<a name="l00099"></a>00099 <span class="keyword">public</span>:
+<a name="l00100"></a>00100         __fastcall <a class="code" href="a00004.html#ac921583be82e760c0483a5f6494c231d">TDiagnwseisForm</a>(TComponent* Owner);
+<a name="l00101"></a>00101 };
+<a name="l00102"></a>00102 
+<a name="l00103"></a>00103 <span class="keyword">extern</span> PACKAGE <a class="code" href="a00004.html">TDiagnwseisForm</a> *<a class="code" href="a00025.html#a6397c476cbd57c5a4e16d542a38cfd4d">DiagnwseisForm</a>;
+<a name="l00104"></a>00104 
+<a name="l00105"></a>00105 <span class="preprocessor">#endif</span>
+</pre></div></div>
+<hr size="1"/><address style="text-align: right;"><small>Δημιουργήθηκε στις Wed Dec 23 03:11:28 2009 για "Πρόγραμμα Διαχείρισης Ιατρείου" από&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.1 </small></address>
+</body>
+</html>

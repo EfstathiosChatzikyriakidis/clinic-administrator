@@ -1,0 +1,131 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>&quot;Πρόγραμμα Διαχείρισης Ιατρείου&quot;: Αρχείο κώδικα perithalpseis_form.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- Δημιουργήθηκε από  Doxygen 1.6.1 -->
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul>
+      <li><a href="index.html"><span>Κύρια&nbsp;Σελίδα</span></a></li>
+      <li><a href="annotated.html"><span>Κλάσεις</span></a></li>
+      <li class="current"><a href="files.html"><span>Αρχεία</span></a></li>
+    </ul>
+  </div>
+  <div class="tabs">
+    <ul>
+      <li><a href="files.html"><span>Λίστα&nbsp;Αρχείων</span></a></li>
+      <li><a href="globals.html"><span>Μέλη&nbsp;Αρχείων</span></a></li>
+    </ul>
+  </div>
+<h1>perithalpseis_form.h</h1><a href="a00036.html">Πήγαινε στην τεκμηρίωση του αρχείου.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="comment">/*</span>
+<a name="l00002"></a>00002 <span class="comment"> * Copyright (C) 2009 Geeks Developers.</span>
+<a name="l00003"></a>00003 <span class="comment"> *</span>
+<a name="l00004"></a>00004 <span class="comment"> * This program is free software: you can redistribute it and/or modify</span>
+<a name="l00005"></a>00005 <span class="comment"> * it under the terms of the GNU General Public License as published by</span>
+<a name="l00006"></a>00006 <span class="comment"> * the Free Software Foundation, either version 3 of the License, or</span>
+<a name="l00007"></a>00007 <span class="comment"> * (at your option) any later version.</span>
+<a name="l00008"></a>00008 <span class="comment"> *</span>
+<a name="l00009"></a>00009 <span class="comment"> * This program is distributed in the hope that it will be useful,</span>
+<a name="l00010"></a>00010 <span class="comment"> * but WITHOUT ANY WARRANTY; without even the implied warranty of</span>
+<a name="l00011"></a>00011 <span class="comment"> * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the</span>
+<a name="l00012"></a>00012 <span class="comment"> * GNU General Public License for more details.</span>
+<a name="l00013"></a>00013 <span class="comment"> *</span>
+<a name="l00014"></a>00014 <span class="comment"> * You should have received a copy of the GNU General Public License</span>
+<a name="l00015"></a>00015 <span class="comment"> * along with this program.  If not, see &lt;http://www.gnu.org/licenses/&gt;.</span>
+<a name="l00016"></a>00016 <span class="comment"> */</span>
+<a name="l00017"></a>00017 
+<a name="l00018"></a>00018 <span class="preprocessor">#ifndef perithalpseis_formH</span>
+<a name="l00019"></a>00019 <span class="preprocessor"></span><span class="preprocessor">#define perithalpseis_formH</span>
+<a name="l00020"></a>00020 <span class="preprocessor"></span>
+<a name="l00021"></a>00021 <span class="preprocessor">#include &lt;Classes.hpp&gt;</span>
+<a name="l00022"></a>00022 <span class="preprocessor">#include &lt;Controls.hpp&gt;</span>
+<a name="l00023"></a>00023 <span class="preprocessor">#include &lt;StdCtrls.hpp&gt;</span>
+<a name="l00024"></a>00024 <span class="preprocessor">#include &lt;Forms.hpp&gt;</span>
+<a name="l00025"></a>00025 <span class="preprocessor">#include &lt;ExtCtrls.hpp&gt;</span>
+<a name="l00026"></a>00026 <span class="preprocessor">#include &lt;jpeg.hpp&gt;</span>
+<a name="l00027"></a>00027 <span class="preprocessor">#include &quot;<a class="code" href="a00021.html">button_frame.h</a>&quot;</span>
+<a name="l00028"></a>00028 <span class="preprocessor">#include &lt;ADODB.hpp&gt;</span>
+<a name="l00029"></a>00029 <span class="preprocessor">#include &lt;DB.hpp&gt;</span>
+<a name="l00030"></a>00030 <span class="preprocessor">#include &lt;DBCtrls.hpp&gt;</span>
+<a name="l00031"></a>00031 <span class="preprocessor">#include &lt;Mask.hpp&gt;</span>
+<a name="l00032"></a>00032 
+<a name="l00033"></a><a class="code" href="a00010.html">00033</a> <span class="keyword">class </span><a class="code" href="a00010.html">TPerithalpseisForm</a> : <span class="keyword">public</span> TForm
+<a name="l00034"></a>00034 {
+<a name="l00035"></a>00035 __published:
+<a name="l00036"></a><a class="code" href="a00010.html#a3559803106b479f8a15dff21a888df40">00036</a>         TDBNavigator *<a class="code" href="a00010.html#a3559803106b479f8a15dff21a888df40">DBNavigatorPerithalpshs</a>;
+<a name="l00037"></a><a class="code" href="a00010.html#ad1bac15a84e2a1a0fbd6de11390cdcfa">00037</a>         <a class="code" href="a00003.html">TButtonFrame</a> *<a class="code" href="a00010.html#ad1bac15a84e2a1a0fbd6de11390cdcfa">HomeButton</a>;
+<a name="l00038"></a><a class="code" href="a00010.html#af192a7d60b351ccff5f15aca4fafc9bf">00038</a>         TTimer *<a class="code" href="a00010.html#af192a7d60b351ccff5f15aca4fafc9bf">Timer</a>;
+<a name="l00039"></a>00039 
+<a name="l00040"></a><a class="code" href="a00010.html#ada0d29315e3182fb68df69e26ca78d6a">00040</a>         TImage *<a class="code" href="a00010.html#ada0d29315e3182fb68df69e26ca78d6a">BackgroundImage</a>;
+<a name="l00041"></a><a class="code" href="a00010.html#a7d0860063ad85d89c1c0fe0ccda680fb">00041</a>         TImage *<a class="code" href="a00010.html#a7d0860063ad85d89c1c0fe0ccda680fb">DownImageArrow</a>;
+<a name="l00042"></a><a class="code" href="a00010.html#ad135b1bfffe9c551b38cd3ea9d367a8a">00042</a>         TImage *<a class="code" href="a00010.html#ad135b1bfffe9c551b38cd3ea9d367a8a">RightImageArrow1</a>;
+<a name="l00043"></a><a class="code" href="a00010.html#a00e5b05243ca4c63a1a17fbe8cb45c40">00043</a>         TImage *<a class="code" href="a00010.html#a00e5b05243ca4c63a1a17fbe8cb45c40">RightImageArrow2</a>;
+<a name="l00044"></a>00044 
+<a name="l00045"></a><a class="code" href="a00010.html#a3071db086d7c2b2e4f9db2f790678b64">00045</a>         TDataSource *<a class="code" href="a00010.html#a3071db086d7c2b2e4f9db2f790678b64">DataSourceAstheneis</a>;
+<a name="l00046"></a><a class="code" href="a00010.html#aba814eabe21ae9ac24123a836421cec0">00046</a>         TDataSource *<a class="code" href="a00010.html#aba814eabe21ae9ac24123a836421cec0">DataSourceEpiskepseis</a>;
+<a name="l00047"></a><a class="code" href="a00010.html#a15fd97f0e233602a91b1476a08ed7491">00047</a>         TDataSource *<a class="code" href="a00010.html#a15fd97f0e233602a91b1476a08ed7491">DataSourcePerithalpsh</a>;
+<a name="l00048"></a><a class="code" href="a00010.html#a5bea583cc4ba84c82cea38b2a4dccb6c">00048</a>         TDataSource *<a class="code" href="a00010.html#a5bea583cc4ba84c82cea38b2a4dccb6c">DataSourceAstheneies</a>;
+<a name="l00049"></a>00049 
+<a name="l00050"></a><a class="code" href="a00010.html#afeaf234a95d40ff9e14d97531c631b42">00050</a>         TADOQuery *<a class="code" href="a00010.html#afeaf234a95d40ff9e14d97531c631b42">ADOQueryAstheneies</a>;
+<a name="l00051"></a><a class="code" href="a00010.html#aa94a30d9ade2066934a1be6b0c79f260">00051</a>         TADOQuery *<a class="code" href="a00010.html#aa94a30d9ade2066934a1be6b0c79f260">ADOQueryAstheneis</a>;
+<a name="l00052"></a><a class="code" href="a00010.html#a16d6697b2ab28e6282ed92d2ed01bd81">00052</a>         TADOQuery *<a class="code" href="a00010.html#a16d6697b2ab28e6282ed92d2ed01bd81">ADOQueryEpiskepseis</a>;
+<a name="l00053"></a><a class="code" href="a00010.html#a43cdb94c09560792fed31c84c871848f">00053</a>         TADOQuery *<a class="code" href="a00010.html#a43cdb94c09560792fed31c84c871848f">ADOQueryPerithalpsh</a>;
+<a name="l00054"></a>00054 
+<a name="l00055"></a><a class="code" href="a00010.html#a50a266f86a6f493f2d05ec415030dc7a">00055</a>         TDBLookupComboBox *<a class="code" href="a00010.html#a50a266f86a6f493f2d05ec415030dc7a">SelectAsthenhDBLookupComboBox</a>;
+<a name="l00056"></a><a class="code" href="a00010.html#a4b6caef17b8381fb621bfa1b0c203ee6">00056</a>         TDBLookupComboBox *<a class="code" href="a00010.html#a4b6caef17b8381fb621bfa1b0c203ee6">SelectEpiskepshDBLookupComboBox</a>;
+<a name="l00057"></a><a class="code" href="a00010.html#a6d46f7b108a500426998818e3c60dd58">00057</a>         TDBLookupComboBox *<a class="code" href="a00010.html#a6d46f7b108a500426998818e3c60dd58">SelectAstheneiaDBLookupComboBox</a>;
+<a name="l00058"></a>00058 
+<a name="l00059"></a><a class="code" href="a00010.html#abd81f35612e8328978b0335d114f720c">00059</a>         TDBEdit *<a class="code" href="a00010.html#abd81f35612e8328978b0335d114f720c">KostosDBEdit</a>;
+<a name="l00060"></a><a class="code" href="a00010.html#a8d239c1c64648dbaf448ac959899fe06">00060</a>         TDBEdit *<a class="code" href="a00010.html#a8d239c1c64648dbaf448ac959899fe06">KwdikosPerithalpshsDBEdit</a>;
+<a name="l00061"></a><a class="code" href="a00010.html#ad4dbc8c0cf586e204e06c0f539b63eb7">00061</a>         TDBEdit *<a class="code" href="a00010.html#ad4dbc8c0cf586e204e06c0f539b63eb7">KwdikosDiagnwshsDBEdit</a>;
+<a name="l00062"></a>00062 
+<a name="l00063"></a><a class="code" href="a00010.html#a2cfc03da774e5df0b1145f79e518cbc2">00063</a>         TEdit *<a class="code" href="a00010.html#a2cfc03da774e5df0b1145f79e518cbc2">SearchEdit</a>;
+<a name="l00064"></a>00064 
+<a name="l00065"></a><a class="code" href="a00010.html#aa6a4a2bf0acd2b2f44ffceff297a4fca">00065</a>         TLabel *<a class="code" href="a00010.html#aa6a4a2bf0acd2b2f44ffceff297a4fca">EuroLabel</a>;
+<a name="l00066"></a><a class="code" href="a00010.html#a62ce372e0d90f108f0772b7b4c832056">00066</a>         TLabel *<a class="code" href="a00010.html#a62ce372e0d90f108f0772b7b4c832056">SectionTitle</a>;
+<a name="l00067"></a><a class="code" href="a00010.html#ab050bb17956e11b29a62b1f4e99b3f23">00067</a>         TLabel *<a class="code" href="a00010.html#ab050bb17956e11b29a62b1f4e99b3f23">SelectAsthenhLabel</a>;
+<a name="l00068"></a><a class="code" href="a00010.html#abdf997e513ec71138674f864288bf2cc">00068</a>         TLabel *<a class="code" href="a00010.html#abdf997e513ec71138674f864288bf2cc">SelectEpiskepshLabel</a>;
+<a name="l00069"></a><a class="code" href="a00010.html#adb6dee07db9ad91f5fe3e512336f01ec">00069</a>         TLabel *<a class="code" href="a00010.html#adb6dee07db9ad91f5fe3e512336f01ec">LabelKostos</a>;
+<a name="l00070"></a><a class="code" href="a00010.html#a9ed252e58f418f8e44294ad775bf0143">00070</a>         TLabel *<a class="code" href="a00010.html#a9ed252e58f418f8e44294ad775bf0143">SelectAstheneiaLabel</a>;
+<a name="l00071"></a><a class="code" href="a00010.html#a5f9cb193fd270a5d1fb9ae873451c816">00071</a>         TLabel *<a class="code" href="a00010.html#a5f9cb193fd270a5d1fb9ae873451c816">SearchLabel</a>;
+<a name="l00072"></a>00072 
+<a name="l00073"></a><a class="code" href="a00010.html#a74c9f48f7baff2204c621aa7c29ae6c0">00073</a>         TStringField *<a class="code" href="a00010.html#a74c9f48f7baff2204c621aa7c29ae6c0">ADOQueryAstheneiskwdikos_asthenh</a>;
+<a name="l00074"></a><a class="code" href="a00010.html#ac628f7beb99261ed7f9b487b5e8845c6">00074</a>         TStringField *<a class="code" href="a00010.html#ac628f7beb99261ed7f9b487b5e8845c6">ADOQueryAstheneisepilogh_listas</a>;
+<a name="l00075"></a>00075 
+<a name="l00076"></a>00076         <span class="keywordtype">void</span> __fastcall <a class="code" href="a00010.html#a90e0e90930929b19585a9d93e7ae0cdb">HomeButtonButtonCollisionAreaClick</a>(TObject *Sender);
+<a name="l00077"></a>00077         <span class="keywordtype">void</span> __fastcall <a class="code" href="a00010.html#a979e079f9e5f0446cfc279e552ac52b0">SelectAsthenhDBLookupComboBoxClick</a>(TObject *Sender);
+<a name="l00078"></a>00078         <span class="keywordtype">void</span> __fastcall <a class="code" href="a00010.html#aef1e35bf00f4ab3999bf1328a47cd648">SelectEpiskepshDBLookupComboBoxClick</a>(TObject *Sender);
+<a name="l00079"></a>00079         <span class="keywordtype">void</span> __fastcall <a class="code" href="a00010.html#a72251366d962dc7de2ede217c89a2f47">SelectAstheneiaDBLookupComboBoxClick</a>(TObject *Sender);
+<a name="l00080"></a>00080 
+<a name="l00081"></a>00081         <span class="keywordtype">void</span> __fastcall <a class="code" href="a00010.html#a050f293f2390ccf2fdd9a1acf3282401">DBNavigatorPerithalpshsClick</a>(TObject *Sender,
+<a name="l00082"></a>00082                                                      TNavigateBtn Button);
+<a name="l00083"></a>00083 
+<a name="l00084"></a>00084         <span class="keywordtype">void</span> __fastcall <a class="code" href="a00010.html#aa7b03d4339f8d64b3f263d977120c571">TimerTimer</a>(TObject *Sender);
+<a name="l00085"></a>00085 
+<a name="l00086"></a>00086         <span class="keywordtype">void</span> __fastcall <a class="code" href="a00010.html#a9068bd87eb338c052b3350d77be3a828">ADOQueryPerithalpshDeleteError</a>(TDataSet *DataSet,
+<a name="l00087"></a>00087                                                        EDatabaseError *E,
+<a name="l00088"></a>00088                                                        TDataAction &amp;Action);
+<a name="l00089"></a>00089 
+<a name="l00090"></a>00090         <span class="keywordtype">void</span> __fastcall <a class="code" href="a00010.html#a3c974ba06f6e9c5b8d8a94e83d8e3a73">ADOQueryPerithalpshBeforeDelete</a>(TDataSet *DataSet);
+<a name="l00091"></a>00091         <span class="keywordtype">void</span> __fastcall <a class="code" href="a00010.html#ae2fb37f3fa17d6d8efa965ba9df7269c">ADOQueryPerithalpshBeforePost</a>(TDataSet *DataSet);
+<a name="l00092"></a>00092         <span class="keywordtype">void</span> __fastcall <a class="code" href="a00010.html#aa6a2e04a685b63bb62e5305c525360d1">SearchEditChange</a>(TObject *Sender);
+<a name="l00093"></a>00093 
+<a name="l00094"></a>00094 <span class="keyword">private</span>:
+<a name="l00095"></a>00095 <span class="keyword">public</span>:
+<a name="l00096"></a>00096         __fastcall <a class="code" href="a00010.html#a880793f8a780b5d70cf83cec15251566">TPerithalpseisForm</a>(TComponent* Owner);
+<a name="l00097"></a>00097 };
+<a name="l00098"></a>00098 
+<a name="l00099"></a>00099 <span class="keyword">extern</span> PACKAGE <a class="code" href="a00010.html">TPerithalpseisForm</a> *<a class="code" href="a00035.html#ad72eb28aa4eabef37eb5fc9fdfe062a3">PerithalpseisForm</a>;
+<a name="l00100"></a>00100 
+<a name="l00101"></a>00101 <span class="preprocessor">#endif</span>
+</pre></div></div>
+<hr size="1"/><address style="text-align: right;"><small>Δημιουργήθηκε στις Wed Dec 23 03:11:28 2009 για "Πρόγραμμα Διαχείρισης Ιατρείου" από&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.1 </small></address>
+</body>
+</html>

@@ -1,0 +1,172 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>&quot;Πρόγραμμα Διαχείρισης Ιατρείου&quot;: Αρχείο κώδικα sxetika_form.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- Δημιουργήθηκε από  Doxygen 1.6.1 -->
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul>
+      <li><a href="index.html"><span>Κύρια&nbsp;Σελίδα</span></a></li>
+      <li><a href="annotated.html"><span>Κλάσεις</span></a></li>
+      <li class="current"><a href="files.html"><span>Αρχεία</span></a></li>
+    </ul>
+  </div>
+  <div class="tabs">
+    <ul>
+      <li><a href="files.html"><span>Λίστα&nbsp;Αρχείων</span></a></li>
+      <li><a href="globals.html"><span>Μέλη&nbsp;Αρχείων</span></a></li>
+    </ul>
+  </div>
+<h1>sxetika_form.h</h1><a href="a00046.html">Πήγαινε στην τεκμηρίωση του αρχείου.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="comment">/*</span>
+<a name="l00002"></a>00002 <span class="comment"> * Copyright (C) 2009 Geeks Developers.</span>
+<a name="l00003"></a>00003 <span class="comment"> *</span>
+<a name="l00004"></a>00004 <span class="comment"> * This program is free software: you can redistribute it and/or modify</span>
+<a name="l00005"></a>00005 <span class="comment"> * it under the terms of the GNU General Public License as published by</span>
+<a name="l00006"></a>00006 <span class="comment"> * the Free Software Foundation, either version 3 of the License, or</span>
+<a name="l00007"></a>00007 <span class="comment"> * (at your option) any later version.</span>
+<a name="l00008"></a>00008 <span class="comment"> *</span>
+<a name="l00009"></a>00009 <span class="comment"> * This program is distributed in the hope that it will be useful,</span>
+<a name="l00010"></a>00010 <span class="comment"> * but WITHOUT ANY WARRANTY; without even the implied warranty of</span>
+<a name="l00011"></a>00011 <span class="comment"> * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the</span>
+<a name="l00012"></a>00012 <span class="comment"> * GNU General Public License for more details.</span>
+<a name="l00013"></a>00013 <span class="comment"> *</span>
+<a name="l00014"></a>00014 <span class="comment"> * You should have received a copy of the GNU General Public License</span>
+<a name="l00015"></a>00015 <span class="comment"> * along with this program.  If not, see &lt;http://www.gnu.org/licenses/&gt;.</span>
+<a name="l00016"></a>00016 <span class="comment"> */</span>
+<a name="l00017"></a>00017 
+<a name="l00018"></a>00018 <span class="preprocessor">#ifndef sxetika_formH</span>
+<a name="l00019"></a>00019 <span class="preprocessor"></span><span class="preprocessor">#define sxetika_formH</span>
+<a name="l00020"></a>00020 <span class="preprocessor"></span>
+<a name="l00021"></a>00021 <span class="preprocessor">#include &lt;Classes.hpp&gt;</span>
+<a name="l00022"></a>00022 <span class="preprocessor">#include &lt;Controls.hpp&gt;</span>
+<a name="l00023"></a>00023 <span class="preprocessor">#include &lt;StdCtrls.hpp&gt;</span>
+<a name="l00024"></a>00024 <span class="preprocessor">#include &lt;Forms.hpp&gt;</span>
+<a name="l00025"></a>00025 <span class="preprocessor">#include &lt;ExtCtrls.hpp&gt;</span>
+<a name="l00026"></a>00026 <span class="preprocessor">#include &lt;jpeg.hpp&gt;</span>
+<a name="l00027"></a>00027 <span class="preprocessor">#include &quot;<a class="code" href="a00021.html">button_frame.h</a>&quot;</span>
+<a name="l00028"></a>00028 <span class="preprocessor">#include &lt;ADODB.hpp&gt;</span>
+<a name="l00029"></a>00029 <span class="preprocessor">#include &lt;ComCtrls.hpp&gt;</span>
+<a name="l00030"></a>00030 <span class="preprocessor">#include &lt;DB.hpp&gt;</span>
+<a name="l00031"></a>00031 <span class="preprocessor">#include &lt;DBCtrls.hpp&gt;</span>
+<a name="l00032"></a>00032 <span class="preprocessor">#include &lt;DBGrids.hpp&gt;</span>
+<a name="l00033"></a>00033 <span class="preprocessor">#include &lt;Grids.hpp&gt;</span>
+<a name="l00034"></a>00034 <span class="preprocessor">#include &lt;Mask.hpp&gt;</span>
+<a name="l00035"></a>00035 
+<a name="l00036"></a><a class="code" href="a00002.html">00036</a> <span class="keyword">class </span><a class="code" href="a00002.html">TAstheneisForm</a> : <span class="keyword">public</span> TForm
+<a name="l00037"></a>00037 {
+<a name="l00038"></a>00038 __published:
+<a name="l00039"></a><a class="code" href="a00002.html#a096ba61ffd7444264f27fcf197529f61">00039</a>         TDBLookupComboBox *<a class="code" href="a00002.html#a096ba61ffd7444264f27fcf197529f61">SelectAsthenhDBLookupComboBox</a>;
+<a name="l00040"></a><a class="code" href="a00002.html#aa70d699ad0d3d68ebfa606aad413d470">00040</a>         TImage *<a class="code" href="a00002.html#aa70d699ad0d3d68ebfa606aad413d470">BackgroundImage</a>;
+<a name="l00041"></a><a class="code" href="a00002.html#a489f8fbdf990beb28ef693e06d8a7347">00041</a>         TDBGrid *<a class="code" href="a00002.html#a489f8fbdf990beb28ef693e06d8a7347">ThlefwnaDBGrid</a>;
+<a name="l00042"></a><a class="code" href="a00002.html#ac8d34441054f5fd314e3f85bf7d5f804">00042</a>         <a class="code" href="a00003.html">TButtonFrame</a> *<a class="code" href="a00002.html#ac8d34441054f5fd314e3f85bf7d5f804">HomeButton</a>;
+<a name="l00043"></a><a class="code" href="a00002.html#a482f9bdb3a2ce1273b045cc7b8431952">00043</a>         TTimer *<a class="code" href="a00002.html#a482f9bdb3a2ce1273b045cc7b8431952">TimerCheckAstheneis</a>;
+<a name="l00044"></a>00044 
+<a name="l00045"></a><a class="code" href="a00002.html#afc13321bf7fda5c9eb5bc994035a9774">00045</a>         TADOQuery *<a class="code" href="a00002.html#afc13321bf7fda5c9eb5bc994035a9774">ADOQueryElenxosAsthenh</a>;
+<a name="l00046"></a><a class="code" href="a00002.html#a0c6cca702ce0bccffaab9ed8131ec16c">00046</a>         TADOQuery *<a class="code" href="a00002.html#a0c6cca702ce0bccffaab9ed8131ec16c">ADOQueryAstheneis</a>;
+<a name="l00047"></a><a class="code" href="a00002.html#ac5ad807df89825287279831a93ae231d">00047</a>         TADOTable *<a class="code" href="a00002.html#ac5ad807df89825287279831a93ae231d">ADOTableThlefwna</a>;
+<a name="l00048"></a>00048 
+<a name="l00049"></a><a class="code" href="a00002.html#a25814dcab9128d2f3d7fb0ee285e46c7">00049</a>         TStringField *<a class="code" href="a00002.html#a25814dcab9128d2f3d7fb0ee285e46c7">ADOTableThlefwnakwdikos_asthenh</a>;
+<a name="l00050"></a><a class="code" href="a00002.html#a944208e9f581f5440ba9f808524f8f67">00050</a>         TStringField *<a class="code" href="a00002.html#a944208e9f581f5440ba9f808524f8f67">ADOQueryAstheneiskwdikos_asthenh</a>;
+<a name="l00051"></a><a class="code" href="a00002.html#a8232e4f940b582393ec4a41a5dc9ee12">00051</a>         TStringField *<a class="code" href="a00002.html#a8232e4f940b582393ec4a41a5dc9ee12">ADOQueryAstheneisepwnimo</a>;
+<a name="l00052"></a><a class="code" href="a00002.html#a804c653b5866d639c11de8ef4fc2c200">00052</a>         TStringField *<a class="code" href="a00002.html#a804c653b5866d639c11de8ef4fc2c200">ADOQueryAstheneisonoma</a>;
+<a name="l00053"></a><a class="code" href="a00002.html#a70c8cb46d795f46e04068d348f5793bd">00053</a>         TStringField *<a class="code" href="a00002.html#a70c8cb46d795f46e04068d348f5793bd">ADOQueryAstheneispolh</a>;
+<a name="l00054"></a><a class="code" href="a00002.html#a0d76819d54684405a55efd6c26306656">00054</a>         TStringField *<a class="code" href="a00002.html#a0d76819d54684405a55efd6c26306656">ADOQueryAstheneisperioxh</a>;
+<a name="l00055"></a><a class="code" href="a00002.html#aeabd4a4a0f5f3036ae92c6ac0b9bed85">00055</a>         TStringField *<a class="code" href="a00002.html#aeabd4a4a0f5f3036ae92c6ac0b9bed85">ADOQueryAstheneisodos</a>;
+<a name="l00056"></a><a class="code" href="a00002.html#a8170434c069f3a0655538913eb96babf">00056</a>         TStringField *<a class="code" href="a00002.html#a8170434c069f3a0655538913eb96babf">ADOQueryAstheneistk</a>;
+<a name="l00057"></a><a class="code" href="a00002.html#ada21bba31347438d55678ffd89ac45f1">00057</a>         TStringField *<a class="code" href="a00002.html#ada21bba31347438d55678ffd89ac45f1">ADOQueryAstheneisemail</a>;
+<a name="l00058"></a><a class="code" href="a00002.html#a77c3895f8f08ed75d7b01ea5a42eedce">00058</a>         TStringField *<a class="code" href="a00002.html#a77c3895f8f08ed75d7b01ea5a42eedce">ADOQueryAstheneisomada_aimatos</a>;
+<a name="l00059"></a><a class="code" href="a00002.html#a0b2b9e176c86090559ea7ad32cc2e7e6">00059</a>         TStringField *<a class="code" href="a00002.html#a0b2b9e176c86090559ea7ad32cc2e7e6">ADOQueryAstheneisepilogh_listas</a>;
+<a name="l00060"></a><a class="code" href="a00002.html#a1eba7ead155b5f173328ab059d52a5a6">00060</a>         TStringField *<a class="code" href="a00002.html#a1eba7ead155b5f173328ab059d52a5a6">ADOTableThlefwnaArithmos</a>;
+<a name="l00061"></a>00061 
+<a name="l00062"></a><a class="code" href="a00002.html#a7c9c7dd95ebbe0fe01ceef523424cfca">00062</a>         TIntegerField *<a class="code" href="a00002.html#a7c9c7dd95ebbe0fe01ceef523424cfca">ADOQueryAstheneiscalculate_age</a>;
+<a name="l00063"></a><a class="code" href="a00002.html#a97604c11e103e9127ff50e0a83013ddf">00063</a>         TDateTimeField *<a class="code" href="a00002.html#a97604c11e103e9127ff50e0a83013ddf">ADOQueryAstheneishm_gennhshs</a>;
+<a name="l00064"></a>00064 
+<a name="l00065"></a><a class="code" href="a00002.html#a8911a04b22fd467a86b30905d4ef6725">00065</a>         TDataSource *<a class="code" href="a00002.html#a8911a04b22fd467a86b30905d4ef6725">DataSourceAstheneis</a>;
+<a name="l00066"></a><a class="code" href="a00002.html#a63f858c57e2e8033621b754a5652c684">00066</a>         TDataSource *<a class="code" href="a00002.html#a63f858c57e2e8033621b754a5652c684">DataSourceThlefwna</a>;
+<a name="l00067"></a><a class="code" href="a00002.html#a33d5665c31ee0fe625263b50c3a6195b">00067</a>         TDataSource *<a class="code" href="a00002.html#a33d5665c31ee0fe625263b50c3a6195b">DataSourceElenxosAsthenh</a>;
+<a name="l00068"></a>00068 
+<a name="l00069"></a><a class="code" href="a00002.html#ae0523e71d688947bacc1d0c878b39c47">00069</a>         TPageControl *<a class="code" href="a00002.html#ae0523e71d688947bacc1d0c878b39c47">AstheneisPageControl</a>;
+<a name="l00070"></a><a class="code" href="a00002.html#a2703c4ed42c61fad85ec3f763c3aa6e9">00070</a>         TTabSheet *<a class="code" href="a00002.html#a2703c4ed42c61fad85ec3f763c3aa6e9">T1</a>;
+<a name="l00071"></a><a class="code" href="a00002.html#a97fbf8b24498dc1e241847980425c44b">00071</a>         TTabSheet *<a class="code" href="a00002.html#a97fbf8b24498dc1e241847980425c44b">T2</a>;
+<a name="l00072"></a><a class="code" href="a00002.html#a21940b637358ef9387746de468554aa7">00072</a>         TTabSheet *<a class="code" href="a00002.html#a21940b637358ef9387746de468554aa7">T3</a>;
+<a name="l00073"></a>00073 
+<a name="l00074"></a><a class="code" href="a00002.html#a3237074d3081abd351deba50e82c7c84">00074</a>         TDBEdit *<a class="code" href="a00002.html#a3237074d3081abd351deba50e82c7c84">HlikiaDBEdit</a>;
+<a name="l00075"></a><a class="code" href="a00002.html#a60e33108c3a4c8a8e8e94af804d1e90b">00075</a>         TDBEdit *<a class="code" href="a00002.html#a60e33108c3a4c8a8e8e94af804d1e90b">HmeromhniaDBEdit</a>;
+<a name="l00076"></a><a class="code" href="a00002.html#a327894d9967e5c8002a25be31eda0947">00076</a>         TDBEdit *<a class="code" href="a00002.html#a327894d9967e5c8002a25be31eda0947">EmailDBEdit</a>;
+<a name="l00077"></a><a class="code" href="a00002.html#acca175f90bdf88961193018ff6a7caa9">00077</a>         TDBEdit *<a class="code" href="a00002.html#acca175f90bdf88961193018ff6a7caa9">OnomaDBEdit</a>;
+<a name="l00078"></a><a class="code" href="a00002.html#a1b38b0fde7f6607e4642070099effe88">00078</a>         TDBEdit *<a class="code" href="a00002.html#a1b38b0fde7f6607e4642070099effe88">EpwnimoDBEdit</a>;
+<a name="l00079"></a><a class="code" href="a00002.html#aae3ce6b0172e34011eea1bad1012096b">00079</a>         TDBEdit *<a class="code" href="a00002.html#aae3ce6b0172e34011eea1bad1012096b">KwdikosAsthenhDBEdit</a>;
+<a name="l00080"></a><a class="code" href="a00002.html#a5c3bdc73c849ab909b238a3a0a7324bb">00080</a>         TDBEdit *<a class="code" href="a00002.html#a5c3bdc73c849ab909b238a3a0a7324bb">TKDBEdit</a>;
+<a name="l00081"></a><a class="code" href="a00002.html#aca96349f9944a20a8c1a76a1a88307ae">00081</a>         TDBEdit *<a class="code" href="a00002.html#aca96349f9944a20a8c1a76a1a88307ae">OdosDBEdit</a>;
+<a name="l00082"></a><a class="code" href="a00002.html#a9e27a2f874a6431fcab9049cb96d8604">00082</a>         TDBEdit *<a class="code" href="a00002.html#a9e27a2f874a6431fcab9049cb96d8604">PerioxhDBEdit</a>;
+<a name="l00083"></a><a class="code" href="a00002.html#a5e2e07b394317360a5b6f3435bfc9a2e">00083</a>         TDBEdit *<a class="code" href="a00002.html#a5e2e07b394317360a5b6f3435bfc9a2e">PolhDBEdit</a>;
+<a name="l00084"></a><a class="code" href="a00002.html#a4a0730037ec5d5ff02ddaff55ab2acd1">00084</a>         TDBEdit *<a class="code" href="a00002.html#a4a0730037ec5d5ff02ddaff55ab2acd1">OmadaAimatosDBEdit</a>;
+<a name="l00085"></a>00085 
+<a name="l00086"></a><a class="code" href="a00002.html#abffb2612f97c484a6c163f8c0eac79b8">00086</a>         TEdit *<a class="code" href="a00002.html#abffb2612f97c484a6c163f8c0eac79b8">SearchEdit</a>;
+<a name="l00087"></a>00087 
+<a name="l00088"></a><a class="code" href="a00002.html#aff1d4f2a16b8600e99e8c39105c4b2d0">00088</a>         TLabel *<a class="code" href="a00002.html#aff1d4f2a16b8600e99e8c39105c4b2d0">SearchLabel</a>;
+<a name="l00089"></a><a class="code" href="a00002.html#afd0ab5ef738c4614e9e2e7a0f129129b">00089</a>         TLabel *<a class="code" href="a00002.html#afd0ab5ef738c4614e9e2e7a0f129129b">SectionTitle</a>;
+<a name="l00090"></a><a class="code" href="a00002.html#af2cbda8c982f6e9f7a52c3438619a269">00090</a>         TLabel *<a class="code" href="a00002.html#af2cbda8c982f6e9f7a52c3438619a269">OmadaAimatosLabel</a>;
+<a name="l00091"></a><a class="code" href="a00002.html#aa6262c37c780601ac6e3214383f9c92f">00091</a>         TLabel *<a class="code" href="a00002.html#aa6262c37c780601ac6e3214383f9c92f">HlikiaLabel</a>;
+<a name="l00092"></a><a class="code" href="a00002.html#aed61172d2df7a82285a7ec453f02477b">00092</a>         TLabel *<a class="code" href="a00002.html#aed61172d2df7a82285a7ec453f02477b">HmeromhniaLabel</a>;
+<a name="l00093"></a><a class="code" href="a00002.html#adc1677f3183d1879df3551e7ad050701">00093</a>         TLabel *<a class="code" href="a00002.html#adc1677f3183d1879df3551e7ad050701">EmailLabel</a>;
+<a name="l00094"></a><a class="code" href="a00002.html#aa937295284135a451767cad5e7512e24">00094</a>         TLabel *<a class="code" href="a00002.html#aa937295284135a451767cad5e7512e24">OnomaLabel</a>;
+<a name="l00095"></a><a class="code" href="a00002.html#a2bd00a414072b7416f0ec69f0fa8e788">00095</a>         TLabel *<a class="code" href="a00002.html#a2bd00a414072b7416f0ec69f0fa8e788">EpwnimoLabel</a>;
+<a name="l00096"></a><a class="code" href="a00002.html#a1566306c6fe468ba8dbe8643f6e20399">00096</a>         TLabel *<a class="code" href="a00002.html#a1566306c6fe468ba8dbe8643f6e20399">KwdikosAsthenhLabel</a>;
+<a name="l00097"></a><a class="code" href="a00002.html#a073cdc9cb9f55e433f85bf523b5e14e6">00097</a>         TLabel *<a class="code" href="a00002.html#a073cdc9cb9f55e433f85bf523b5e14e6">TKLabel</a>;
+<a name="l00098"></a><a class="code" href="a00002.html#a935f7836b7568923686a1394b745fa5a">00098</a>         TLabel *<a class="code" href="a00002.html#a935f7836b7568923686a1394b745fa5a">OdosLabel</a>;
+<a name="l00099"></a><a class="code" href="a00002.html#a3c5c080e854719605b4172593488e260">00099</a>         TLabel *<a class="code" href="a00002.html#a3c5c080e854719605b4172593488e260">PerioxhLabel</a>;
+<a name="l00100"></a><a class="code" href="a00002.html#ab7fda9f528f756612346b3fa9660f0e6">00100</a>         TLabel *<a class="code" href="a00002.html#ab7fda9f528f756612346b3fa9660f0e6">PolhLabel</a>;
+<a name="l00101"></a><a class="code" href="a00002.html#a43983d8ca4fe83516debcb8f9a32bb25">00101</a>         TLabel *<a class="code" href="a00002.html#a43983d8ca4fe83516debcb8f9a32bb25">SelectAsthenhLabel</a>;
+<a name="l00102"></a>00102 
+<a name="l00103"></a><a class="code" href="a00002.html#a4c3f920abc34445ce4edc83f98e03572">00103</a>         TDBNavigator *<a class="code" href="a00002.html#a4c3f920abc34445ce4edc83f98e03572">ThlefwnaDBNavigator</a>;
+<a name="l00104"></a><a class="code" href="a00002.html#a60b37e1510156f012f07bc288808dca1">00104</a>         TDBNavigator *<a class="code" href="a00002.html#a60b37e1510156f012f07bc288808dca1">AstheneisDBNavigator</a>;
+<a name="l00105"></a>00105 
+<a name="l00106"></a>00106         <span class="keywordtype">void</span> __fastcall <a class="code" href="a00002.html#a443b28b8bc14a22b1bf2b30f4a484e87">HomeButtonButtonCollisionAreaClick</a>(TObject *Sender);
+<a name="l00107"></a>00107         <span class="keywordtype">void</span> __fastcall <a class="code" href="a00002.html#a6ed3eec74b002f237b82e68cb5834591">SelectAsthenhDBLookupComboBoxClick</a>(TObject *Sender);
+<a name="l00108"></a>00108         <span class="keywordtype">void</span> __fastcall <a class="code" href="a00002.html#a353ad58ef687d3b2e3a6c1583e05138d">AstheneisDBNavigatorClick</a>(TObject *Sender, TNavigateBtn Button);
+<a name="l00109"></a>00109         <span class="keywordtype">void</span> __fastcall <a class="code" href="a00002.html#a9e99e2a9619f341c84815b8ac35d79ac">ADOTableThlefwnaBeforeDelete</a>(TDataSet *DataSet);
+<a name="l00110"></a>00110         <span class="keywordtype">void</span> __fastcall <a class="code" href="a00002.html#a5b6b2605dfc560e5dcae27c2d58431c4">TimerCheckAstheneisTimer</a>(TObject *Sender);
+<a name="l00111"></a>00111         <span class="keywordtype">void</span> __fastcall <a class="code" href="a00002.html#a45cf186c64b235d9b2b9c3ec4a829f39">ADOTableThlefwnaArithmosChange</a>(TField *Sender);
+<a name="l00112"></a>00112         <span class="keywordtype">void</span> __fastcall <a class="code" href="a00002.html#a28dc99254527bee1c5861bf2466e959f">ADOQueryAstheneisCalcFields</a>(TDataSet *DataSet);
+<a name="l00113"></a>00113 
+<a name="l00114"></a>00114         <span class="keywordtype">void</span> __fastcall <a class="code" href="a00002.html#a93b7553efa1e4c0756794e89dd163de7">ADOQueryAstheneisDeleteError</a>(TDataSet *DataSet,
+<a name="l00115"></a>00115                                                      EDatabaseError *E,
+<a name="l00116"></a>00116                                                      TDataAction &amp;Action);
+<a name="l00117"></a>00117 
+<a name="l00118"></a>00118         <span class="keywordtype">void</span> __fastcall <a class="code" href="a00002.html#afd0faab830c1944475d2fa101ad1bffc">ADOTableThlefwnaPostError</a>(TDataSet *DataSet,
+<a name="l00119"></a>00119                                                   EDatabaseError *E,
+<a name="l00120"></a>00120                                                   TDataAction &amp;Action);
+<a name="l00121"></a>00121 
+<a name="l00122"></a>00122         <span class="keywordtype">void</span> __fastcall <a class="code" href="a00002.html#a77a30954fb21381497add9c72cfd109d">ADOQueryAstheneiskwdikos_asthenhChange</a>(TField *Sender);
+<a name="l00123"></a>00123         <span class="keywordtype">void</span> __fastcall <a class="code" href="a00002.html#a141d86b81f42b67a54a1663f9909db3c">SelectAsthenhDBLookupComboBoxEnter</a>(TObject *Sender);
+<a name="l00124"></a>00124         <span class="keywordtype">void</span> __fastcall <a class="code" href="a00002.html#ad2b414c401c39d847b1643f944f6e104">ADOQueryAstheneisAfterDelete</a>(TDataSet *DataSet);
+<a name="l00125"></a>00125         <span class="keywordtype">void</span> __fastcall <a class="code" href="a00002.html#af0589c15ddd1ceb748a98a37e6dfb5d1">ADOQueryAstheneisBeforePost</a>(TDataSet *DataSet);
+<a name="l00126"></a>00126         <span class="keywordtype">void</span> __fastcall <a class="code" href="a00002.html#ae2472556286178f01d84dfe5dcac7df2">ADOTableThlefwnaBeforePost</a>(TDataSet *DataSet);
+<a name="l00127"></a>00127 
+<a name="l00128"></a>00128         <span class="keywordtype">void</span> __fastcall <a class="code" href="a00002.html#abfb6805af5d8bc50a955654138687c5a">ADOQueryAstheneisPostError</a>(TDataSet *DataSet,
+<a name="l00129"></a>00129                                                    EDatabaseError *E,
+<a name="l00130"></a>00130                                                                                                                                                                                                    TDataAction &amp;Action);
+<a name="l00131"></a>00131 
+<a name="l00132"></a>00132         <span class="keywordtype">void</span> __fastcall <a class="code" href="a00002.html#a3398c07f9be2c144a3de26e0781cbdc8">SearchEditChange</a>(TObject *Sender);
+<a name="l00133"></a>00133 
+<a name="l00134"></a>00134 <span class="keyword">private</span>:
+<a name="l00135"></a>00135 <span class="keyword">public</span>:
+<a name="l00136"></a>00136         __fastcall <a class="code" href="a00002.html#a60e999ce47d47ca9796b893f2b3413b8">TAstheneisForm</a>(TComponent* Owner);
+<a name="l00137"></a>00137         <span class="keywordtype">void</span> <a class="code" href="a00002.html#ac96bd63db71914a865303c47d8420d6c">filter_thlefwna</a>(AnsiString search_text);
+<a name="l00138"></a>00138 };
+<a name="l00139"></a>00139 
+<a name="l00140"></a>00140 <span class="keyword">extern</span> PACKAGE <a class="code" href="a00002.html">TAstheneisForm</a> *<a class="code" href="a00045.html#abed4eea5fb5c621834660fc576f5867b">AstheneisForm</a>;
+<a name="l00141"></a>00141 
+<a name="l00142"></a>00142 <span class="preprocessor">#endif</span>
+</pre></div></div>
+<hr size="1"/><address style="text-align: right;"><small>Δημιουργήθηκε στις Wed Dec 23 03:11:28 2009 για "Πρόγραμμα Διαχείρισης Ιατρείου" από&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.1 </small></address>
+</body>
+</html>

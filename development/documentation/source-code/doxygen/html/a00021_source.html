@@ -1,0 +1,91 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>&quot;Πρόγραμμα Διαχείρισης Ιατρείου&quot;: Αρχείο κώδικα button_frame.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- Δημιουργήθηκε από  Doxygen 1.6.1 -->
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul>
+      <li><a href="index.html"><span>Κύρια&nbsp;Σελίδα</span></a></li>
+      <li><a href="annotated.html"><span>Κλάσεις</span></a></li>
+      <li class="current"><a href="files.html"><span>Αρχεία</span></a></li>
+    </ul>
+  </div>
+  <div class="tabs">
+    <ul>
+      <li><a href="files.html"><span>Λίστα&nbsp;Αρχείων</span></a></li>
+      <li><a href="globals.html"><span>Μέλη&nbsp;Αρχείων</span></a></li>
+    </ul>
+  </div>
+<h1>button_frame.h</h1><a href="a00021.html">Πήγαινε στην τεκμηρίωση του αρχείου.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="comment">/*</span>
+<a name="l00002"></a>00002 <span class="comment"> * Copyright (C) 2009 Geeks Developers.</span>
+<a name="l00003"></a>00003 <span class="comment"> *</span>
+<a name="l00004"></a>00004 <span class="comment"> * This program is free software: you can redistribute it and/or modify</span>
+<a name="l00005"></a>00005 <span class="comment"> * it under the terms of the GNU General Public License as published by</span>
+<a name="l00006"></a>00006 <span class="comment"> * the Free Software Foundation, either version 3 of the License, or</span>
+<a name="l00007"></a>00007 <span class="comment"> * (at your option) any later version.</span>
+<a name="l00008"></a>00008 <span class="comment"> *</span>
+<a name="l00009"></a>00009 <span class="comment"> * This program is distributed in the hope that it will be useful,</span>
+<a name="l00010"></a>00010 <span class="comment"> * but WITHOUT ANY WARRANTY; without even the implied warranty of</span>
+<a name="l00011"></a>00011 <span class="comment"> * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the</span>
+<a name="l00012"></a>00012 <span class="comment"> * GNU General Public License for more details.</span>
+<a name="l00013"></a>00013 <span class="comment"> *</span>
+<a name="l00014"></a>00014 <span class="comment"> * You should have received a copy of the GNU General Public License</span>
+<a name="l00015"></a>00015 <span class="comment"> * along with this program.  If not, see &lt;http://www.gnu.org/licenses/&gt;.</span>
+<a name="l00016"></a>00016 <span class="comment"> */</span>
+<a name="l00017"></a>00017 
+<a name="l00018"></a>00018 <span class="preprocessor">#ifndef button_frameH</span>
+<a name="l00019"></a>00019 <span class="preprocessor"></span><span class="preprocessor">#define button_frameH</span>
+<a name="l00020"></a>00020 <span class="preprocessor"></span>
+<a name="l00021"></a>00021 <span class="preprocessor">#include &lt;Classes.hpp&gt;</span>
+<a name="l00022"></a>00022 <span class="preprocessor">#include &lt;Controls.hpp&gt;</span>
+<a name="l00023"></a>00023 <span class="preprocessor">#include &lt;StdCtrls.hpp&gt;</span>
+<a name="l00024"></a>00024 <span class="preprocessor">#include &lt;Forms.hpp&gt;</span>
+<a name="l00025"></a>00025 <span class="preprocessor">#include &lt;ExtCtrls.hpp&gt;</span>
+<a name="l00026"></a>00026 
+<a name="l00027"></a><a class="code" href="a00003.html">00027</a> <span class="keyword">class </span><a class="code" href="a00003.html">TButtonFrame</a> : <span class="keyword">public</span> TFrame
+<a name="l00028"></a>00028 {
+<a name="l00029"></a>00029 __published:
+<a name="l00030"></a><a class="code" href="a00003.html#a653e70aa2bf6c9b0f0a3fee2f7d88352">00030</a>         TImage *<a class="code" href="a00003.html#a653e70aa2bf6c9b0f0a3fee2f7d88352">ButtonImageNormal</a>;
+<a name="l00031"></a><a class="code" href="a00003.html#ab55efa7f2e5c68faa7da467cd9eb2ad4">00031</a>         TImage *<a class="code" href="a00003.html#ab55efa7f2e5c68faa7da467cd9eb2ad4">ButtonImageFocused</a>;
+<a name="l00032"></a>00032 
+<a name="l00033"></a><a class="code" href="a00003.html#aa95f9d6c9410aadacc3fa02db819b263">00033</a>         TTimer *<a class="code" href="a00003.html#aa95f9d6c9410aadacc3fa02db819b263">TimerBlinking</a>;
+<a name="l00034"></a>00034 
+<a name="l00035"></a><a class="code" href="a00003.html#ac47beb55795aa38fd21106e736ff11f0">00035</a>         TLabel *<a class="code" href="a00003.html#ac47beb55795aa38fd21106e736ff11f0">ButtonCollisionArea</a>;
+<a name="l00036"></a><a class="code" href="a00003.html#ad6bf9946c40610baf1390c0b7dd30426">00036</a>         TLabel *<a class="code" href="a00003.html#ad6bf9946c40610baf1390c0b7dd30426">ButtonTextFocused</a>;
+<a name="l00037"></a>00037 
+<a name="l00038"></a>00038         <span class="keywordtype">void</span> __fastcall <a class="code" href="a00003.html#a30ab097e46db612b709f0d7a9fab8e7d">ButtonCollisionAreaMouseDown</a>(TObject *Sender,
+<a name="l00039"></a>00039                                                      TMouseButton Button,
+<a name="l00040"></a>00040                                                      TShiftState Shift,
+<a name="l00041"></a>00041                                                      <span class="keywordtype">int</span> X,
+<a name="l00042"></a>00042                                                      <span class="keywordtype">int</span> Y);
+<a name="l00043"></a>00043 
+<a name="l00044"></a>00044         <span class="keywordtype">void</span> __fastcall <a class="code" href="a00003.html#ac9a2784f8266b2bc4f0086a1bb1056e6">ButtonCollisionAreaMouseUp</a>(TObject *Sender,
+<a name="l00045"></a>00045                                                    TMouseButton Button,
+<a name="l00046"></a>00046                                                    TShiftState Shift,
+<a name="l00047"></a>00047                                                    <span class="keywordtype">int</span> X,
+<a name="l00048"></a>00048                                                    <span class="keywordtype">int</span> Y);
+<a name="l00049"></a>00049 
+<a name="l00050"></a>00050         <span class="keywordtype">void</span> __fastcall <a class="code" href="a00003.html#a6caf8e99ddad6a67e577c6328cec424d">ButtonCollisionAreaMouseEnter</a>(TObject *Sender);
+<a name="l00051"></a>00051         <span class="keywordtype">void</span> __fastcall <a class="code" href="a00003.html#a8c42bd49860945a54544585ad68002c5">ButtonCollisionAreaMouseLeave</a>(TObject *Sender);
+<a name="l00052"></a>00052         <span class="keywordtype">void</span> __fastcall <a class="code" href="a00003.html#ae18aca84956691d31919749ebe5796a1">TimerBlinkingTimer</a>(TObject *Sender);
+<a name="l00053"></a>00053 
+<a name="l00054"></a>00054 <span class="keyword">private</span>:
+<a name="l00055"></a>00055 <span class="keyword">public</span>:
+<a name="l00056"></a>00056         __fastcall <a class="code" href="a00003.html#a2615e67fd8772b0d38eaf49d4a58fb64">TButtonFrame</a>(TComponent* Owner);
+<a name="l00057"></a>00057 };
+<a name="l00058"></a>00058 
+<a name="l00059"></a>00059 <span class="keyword">extern</span> PACKAGE <a class="code" href="a00003.html">TButtonFrame</a> *<a class="code" href="a00020.html#a492a66db67217bc336b32c332f095597">ButtonFrame</a>;
+<a name="l00060"></a>00060 
+<a name="l00061"></a>00061 <span class="preprocessor">#endif</span>
+</pre></div></div>
+<hr size="1"/><address style="text-align: right;"><small>Δημιουργήθηκε στις Wed Dec 23 03:11:28 2009 για "Πρόγραμμα Διαχείρισης Ιατρείου" από&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.1 </small></address>
+</body>
+</html>

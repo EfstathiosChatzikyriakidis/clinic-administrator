@@ -1,0 +1,100 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>&quot;Πρόγραμμα Διαχείρισης Ιατρείου&quot;: Αρχείο κώδικα diaxeirish_iatreiou.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- Δημιουργήθηκε από  Doxygen 1.6.1 -->
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul>
+      <li><a href="index.html"><span>Κύρια&nbsp;Σελίδα</span></a></li>
+      <li><a href="annotated.html"><span>Κλάσεις</span></a></li>
+      <li class="current"><a href="files.html"><span>Αρχεία</span></a></li>
+    </ul>
+  </div>
+  <div class="tabs">
+    <ul>
+      <li><a href="files.html"><span>Λίστα&nbsp;Αρχείων</span></a></li>
+      <li><a href="globals.html"><span>Μέλη&nbsp;Αρχείων</span></a></li>
+    </ul>
+  </div>
+<h1>diaxeirish_iatreiou.cpp</h1><a href="a00024.html">Πήγαινε στην τεκμηρίωση του αρχείου.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="comment">/*</span>
+<a name="l00002"></a>00002 <span class="comment"> * Copyright (C) 2009 Geeks Developers.</span>
+<a name="l00003"></a>00003 <span class="comment"> *</span>
+<a name="l00004"></a>00004 <span class="comment"> * This program is free software: you can redistribute it and/or modify</span>
+<a name="l00005"></a>00005 <span class="comment"> * it under the terms of the GNU General Public License as published by</span>
+<a name="l00006"></a>00006 <span class="comment"> * the Free Software Foundation, either version 3 of the License, or</span>
+<a name="l00007"></a>00007 <span class="comment"> * (at your option) any later version.</span>
+<a name="l00008"></a>00008 <span class="comment"> *</span>
+<a name="l00009"></a>00009 <span class="comment"> * This program is distributed in the hope that it will be useful,</span>
+<a name="l00010"></a>00010 <span class="comment"> * but WITHOUT ANY WARRANTY; without even the implied warranty of</span>
+<a name="l00011"></a>00011 <span class="comment"> * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the</span>
+<a name="l00012"></a>00012 <span class="comment"> * GNU General Public License for more details.</span>
+<a name="l00013"></a>00013 <span class="comment"> *</span>
+<a name="l00014"></a>00014 <span class="comment"> * You should have received a copy of the GNU General Public License</span>
+<a name="l00015"></a>00015 <span class="comment"> * along with this program.  If not, see &lt;http://www.gnu.org/licenses/&gt;.</span>
+<a name="l00016"></a>00016 <span class="comment"> */</span>
+<a name="l00017"></a>00017 
+<a name="l00018"></a>00018 <span class="preprocessor">#include &lt;vcl.h&gt;</span>
+<a name="l00019"></a>00019 <span class="preprocessor">#pragma hdrstop</span>
+<a name="l00020"></a>00020 <span class="preprocessor"></span>
+<a name="l00021"></a>00021 <a class="code" href="a00024.html#a67363ecb49a3a77a388afba9a5124471">USEFORM</a>(<span class="stringliteral">&quot;main_form.cpp&quot;</span>, <a class="code" href="a00033.html#a3b98aac4b2e9ee78f47374681b349606">MainForm</a>);
+<a name="l00022"></a>00022 <a class="code" href="a00024.html#a67363ecb49a3a77a388afba9a5124471">USEFORM</a>(<span class="stringliteral">&quot;button_frame.cpp&quot;</span>, <a class="code" href="a00020.html#a492a66db67217bc336b32c332f095597">ButtonFrame</a>); <span class="comment">/* TFrame: File Type */</span>
+<a name="l00023"></a>00023 <a class="code" href="a00024.html#a67363ecb49a3a77a388afba9a5124471">USEFORM</a>(<span class="stringliteral">&quot;splash_form.cpp&quot;</span>, <a class="code" href="a00043.html#a30e87eedb33dc5a3317937eefb98ca52">SplashForm</a>);
+<a name="l00024"></a>00024 <a class="code" href="a00024.html#a67363ecb49a3a77a388afba9a5124471">USEFORM</a>(<span class="stringliteral">&quot;sxetika_form.cpp&quot;</span>, <a class="code" href="a00045.html#abed4eea5fb5c621834660fc576f5867b">AstheneisForm</a>);
+<a name="l00025"></a>00025 <a class="code" href="a00024.html#a67363ecb49a3a77a388afba9a5124471">USEFORM</a>(<span class="stringliteral">&quot;sintagografish_form.cpp&quot;</span>, <a class="code" href="a00041.html#a8e874fd53165dc73be63e50ccab4c590">EksetaseisForm</a>);
+<a name="l00026"></a>00026 <a class="code" href="a00024.html#a67363ecb49a3a77a388afba9a5124471">USEFORM</a>(<span class="stringliteral">&quot;sindesmoi_form.cpp&quot;</span>, <a class="code" href="a00039.html#a8b1ef90332237890531afed8248d240a">RantevouForm</a>);
+<a name="l00027"></a>00027 <a class="code" href="a00024.html#a67363ecb49a3a77a388afba9a5124471">USEFORM</a>(<span class="stringliteral">&quot;rantevou_form.cpp&quot;</span>, <a class="code" href="a00037.html#a7ca4ae32985e9d96e54ef35bcac55304">FarmakaForm</a>);
+<a name="l00028"></a>00028 <a class="code" href="a00024.html#a67363ecb49a3a77a388afba9a5124471">USEFORM</a>(<span class="stringliteral">&quot;perithalpseis_form.cpp&quot;</span>, <a class="code" href="a00035.html#ad72eb28aa4eabef37eb5fc9fdfe062a3">PerithalpseisForm</a>);
+<a name="l00029"></a>00029 <a class="code" href="a00024.html#a67363ecb49a3a77a388afba9a5124471">USEFORM</a>(<span class="stringliteral">&quot;farmaka_form.cpp&quot;</span>, <a class="code" href="a00029.html#a74b46f21c48110a3668ff0ecb8d31f31">EpiskepseisForm</a>);
+<a name="l00030"></a>00030 <a class="code" href="a00024.html#a67363ecb49a3a77a388afba9a5124471">USEFORM</a>(<span class="stringliteral">&quot;episkepseis_form.cpp&quot;</span>, <a class="code" href="a00027.html#a5ec15c0bdf2f03f524e97a3232a48941">SintagografhseisForm</a>);
+<a name="l00031"></a>00031 <a class="code" href="a00024.html#a67363ecb49a3a77a388afba9a5124471">USEFORM</a>(<span class="stringliteral">&quot;eksetaseis_form.cpp&quot;</span>, <a class="code" href="a00025.html#a6397c476cbd57c5a4e16d542a38cfd4d">DiagnwseisForm</a>);
+<a name="l00032"></a>00032 <a class="code" href="a00024.html#a67363ecb49a3a77a388afba9a5124471">USEFORM</a>(<span class="stringliteral">&quot;diagnwseis_form.cpp&quot;</span>, <a class="code" href="a00022.html#ad34336d49a5f36722b490b87dcb2b7c8">SindesmoiForm</a>);
+<a name="l00033"></a>00033 <a class="code" href="a00024.html#a67363ecb49a3a77a388afba9a5124471">USEFORM</a>(<span class="stringliteral">&quot;astheneis_form.cpp&quot;</span>, <a class="code" href="a00018.html#aaeb77efd0d1df48fdd2a980dc9a306da">AstheneiesForm</a>);
+<a name="l00034"></a>00034 <a class="code" href="a00024.html#a67363ecb49a3a77a388afba9a5124471">USEFORM</a>(<span class="stringliteral">&quot;astheneies_form.cpp&quot;</span>, <a class="code" href="a00016.html#a958ec0ae0ae2629367eee02ae8e0db0d">SxetikaForm</a>);
+<a name="l00035"></a>00035 <a class="code" href="a00024.html#a67363ecb49a3a77a388afba9a5124471">USEFORM</a>(<span class="stringliteral">&quot;login_form.cpp&quot;</span>, <a class="code" href="a00031.html#a47c1da18abdd0f9975f76863857fb711">LoginForm</a>);
+<a name="l00036"></a>00036 
+<a name="l00037"></a>00037 WINAPI
+<a name="l00038"></a><a class="code" href="a00024.html#ab7f0bcd1595734d089476bf8c463de0e">00038</a> <a class="code" href="a00024.html#ab7f0bcd1595734d089476bf8c463de0e">WinMain</a>(HINSTANCE, HINSTANCE, LPSTR, <span class="keywordtype">int</span>)
+<a name="l00039"></a>00039 {
+<a name="l00040"></a>00040   <span class="keywordflow">try</span>
+<a name="l00041"></a>00041   {
+<a name="l00042"></a>00042     Application-&gt;Initialize();
+<a name="l00043"></a>00043     Application-&gt;Title = <span class="stringliteral">&quot;Πρόγραμμα Διαχείρισης Ιατρείου, Έκδοση 1.0 - Ιπποκράτης.&quot;</span>;
+<a name="l00044"></a>00044 
+<a name="l00045"></a>00045     Application-&gt;CreateForm(__classid(<a class="code" href="a00009.html">TMainForm</a>), &amp;<a class="code" href="a00033.html#a3b98aac4b2e9ee78f47374681b349606">MainForm</a>);
+<a name="l00046"></a>00046     Application-&gt;ShowMainForm = <span class="keyword">false</span>;
+<a name="l00047"></a>00047 
+<a name="l00048"></a>00048     Application-&gt;CreateForm(__classid(<a class="code" href="a00014.html">TSplashForm</a>), &amp;<a class="code" href="a00043.html#a30e87eedb33dc5a3317937eefb98ca52">SplashForm</a>);
+<a name="l00049"></a>00049     Application-&gt;CreateForm(__classid(<a class="code" href="a00008.html">TLoginForm</a>), &amp;<a class="code" href="a00031.html#a47c1da18abdd0f9975f76863857fb711">LoginForm</a>);
+<a name="l00050"></a>00050 
+<a name="l00051"></a>00051     Application-&gt;Run();
+<a name="l00052"></a>00052   }
+<a name="l00053"></a>00053   <span class="keywordflow">catch</span> (Exception &amp;exception)
+<a name="l00054"></a>00054   {
+<a name="l00055"></a>00055     Application-&gt;ShowException(&amp;exception);
+<a name="l00056"></a>00056   }
+<a name="l00057"></a>00057   <span class="keywordflow">catch</span> (...)
+<a name="l00058"></a>00058   {
+<a name="l00059"></a>00059     <span class="keywordflow">try</span>
+<a name="l00060"></a>00060     {
+<a name="l00061"></a>00061       <span class="keywordflow">throw</span> Exception(<span class="stringliteral">&quot;&quot;</span>);
+<a name="l00062"></a>00062     }
+<a name="l00063"></a>00063     <span class="keywordflow">catch</span> (Exception &amp;exception)
+<a name="l00064"></a>00064     {
+<a name="l00065"></a>00065       Application-&gt;ShowException(&amp;exception);
+<a name="l00066"></a>00066     }
+<a name="l00067"></a>00067   }
+<a name="l00068"></a>00068 
+<a name="l00069"></a>00069   <span class="keywordflow">return</span> 0;
+<a name="l00070"></a>00070 }
+</pre></div></div>
+<hr size="1"/><address style="text-align: right;"><small>Δημιουργήθηκε στις Wed Dec 23 03:11:28 2009 για "Πρόγραμμα Διαχείρισης Ιατρείου" από&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.1 </small></address>
+</body>
+</html>

@@ -1,0 +1,195 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>&quot;Πρόγραμμα Διαχείρισης Ιατρείου&quot;: Αρχείο κώδικα main_form.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- Δημιουργήθηκε από  Doxygen 1.6.1 -->
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul>
+      <li><a href="index.html"><span>Κύρια&nbsp;Σελίδα</span></a></li>
+      <li><a href="annotated.html"><span>Κλάσεις</span></a></li>
+      <li class="current"><a href="files.html"><span>Αρχεία</span></a></li>
+    </ul>
+  </div>
+  <div class="tabs">
+    <ul>
+      <li><a href="files.html"><span>Λίστα&nbsp;Αρχείων</span></a></li>
+      <li><a href="globals.html"><span>Μέλη&nbsp;Αρχείων</span></a></li>
+    </ul>
+  </div>
+<h1>main_form.cpp</h1><a href="a00033.html">Πήγαινε στην τεκμηρίωση του αρχείου.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="comment">/*</span>
+<a name="l00002"></a>00002 <span class="comment"> * Copyright (C) 2009 Geeks Developers.</span>
+<a name="l00003"></a>00003 <span class="comment"> *</span>
+<a name="l00004"></a>00004 <span class="comment"> * This program is free software: you can redistribute it and/or modify</span>
+<a name="l00005"></a>00005 <span class="comment"> * it under the terms of the GNU General Public License as published by</span>
+<a name="l00006"></a>00006 <span class="comment"> * the Free Software Foundation, either version 3 of the License, or</span>
+<a name="l00007"></a>00007 <span class="comment"> * (at your option) any later version.</span>
+<a name="l00008"></a>00008 <span class="comment"> *</span>
+<a name="l00009"></a>00009 <span class="comment"> * This program is distributed in the hope that it will be useful,</span>
+<a name="l00010"></a>00010 <span class="comment"> * but WITHOUT ANY WARRANTY; without even the implied warranty of</span>
+<a name="l00011"></a>00011 <span class="comment"> * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the</span>
+<a name="l00012"></a>00012 <span class="comment"> * GNU General Public License for more details.</span>
+<a name="l00013"></a>00013 <span class="comment"> *</span>
+<a name="l00014"></a>00014 <span class="comment"> * You should have received a copy of the GNU General Public License</span>
+<a name="l00015"></a>00015 <span class="comment"> * along with this program.  If not, see &lt;http://www.gnu.org/licenses/&gt;.</span>
+<a name="l00016"></a>00016 <span class="comment"> */</span>
+<a name="l00017"></a>00017 
+<a name="l00018"></a>00018 <span class="preprocessor">#include &lt;vcl.h&gt;</span>
+<a name="l00019"></a>00019 <span class="preprocessor">#include &lt;process.h&gt;</span>
+<a name="l00020"></a>00020 
+<a name="l00021"></a>00021 <span class="preprocessor">#pragma hdrstop</span>
+<a name="l00022"></a>00022 <span class="preprocessor"></span>
+<a name="l00023"></a>00023 <span class="preprocessor">#include &quot;<a class="code" href="a00034.html">main_form.h</a>&quot;</span>
+<a name="l00024"></a>00024 <span class="preprocessor">#include &quot;<a class="code" href="a00017.html">astheneies_form.h</a>&quot;</span>
+<a name="l00025"></a>00025 <span class="preprocessor">#include &quot;<a class="code" href="a00019.html">astheneis_form.h</a>&quot;</span>
+<a name="l00026"></a>00026 <span class="preprocessor">#include &quot;<a class="code" href="a00023.html">diagnwseis_form.h</a>&quot;</span>
+<a name="l00027"></a>00027 <span class="preprocessor">#include &quot;<a class="code" href="a00026.html">eksetaseis_form.h</a>&quot;</span>
+<a name="l00028"></a>00028 <span class="preprocessor">#include &quot;<a class="code" href="a00028.html">episkepseis_form.h</a>&quot;</span>
+<a name="l00029"></a>00029 <span class="preprocessor">#include &quot;<a class="code" href="a00030.html">farmaka_form.h</a>&quot;</span>
+<a name="l00030"></a>00030 <span class="preprocessor">#include &quot;<a class="code" href="a00036.html">perithalpseis_form.h</a>&quot;</span>
+<a name="l00031"></a>00031 <span class="preprocessor">#include &quot;<a class="code" href="a00038.html">rantevou_form.h</a>&quot;</span>
+<a name="l00032"></a>00032 <span class="preprocessor">#include &quot;<a class="code" href="a00040.html">sindesmoi_form.h</a>&quot;</span>
+<a name="l00033"></a>00033 <span class="preprocessor">#include &quot;<a class="code" href="a00042.html">sintagografish_form.h</a>&quot;</span>
+<a name="l00034"></a>00034 <span class="preprocessor">#include &quot;<a class="code" href="a00046.html">sxetika_form.h</a>&quot;</span>
+<a name="l00035"></a>00035 
+<a name="l00036"></a>00036 <span class="preprocessor">#pragma package(smart_init)</span>
+<a name="l00037"></a>00037 <span class="preprocessor"></span><span class="preprocessor">#pragma link &quot;button_frame&quot;</span>
+<a name="l00038"></a>00038 <span class="preprocessor"></span><span class="preprocessor">#pragma link &quot;trayicon&quot;</span>
+<a name="l00039"></a>00039 <span class="preprocessor"></span><span class="preprocessor">#pragma resource &quot;*.dfm&quot;</span>
+<a name="l00040"></a>00040 <span class="preprocessor"></span>
+<a name="l00041"></a><a class="code" href="a00034.html#accd90db6b6287d724ba1bb2509e19844">00041</a> <a class="code" href="a00009.html">TMainForm</a> *<a class="code" href="a00033.html#a3b98aac4b2e9ee78f47374681b349606">MainForm</a>;
+<a name="l00042"></a>00042 
+<a name="l00043"></a>00043 __fastcall
+<a name="l00044"></a><a class="code" href="a00009.html#a051eb0232ddc0151b03b316e38169f43">00044</a> <a class="code" href="a00009.html#a051eb0232ddc0151b03b316e38169f43">TMainForm::TMainForm</a>(TComponent* Owner) : TForm(Owner)
+<a name="l00045"></a>00045 {
+<a name="l00046"></a>00046 }
+<a name="l00047"></a>00047 
+<a name="l00048"></a>00048 <span class="keywordtype">void</span> __fastcall
+<a name="l00049"></a><a class="code" href="a00009.html#ac368f9b36ecd99747e57fac77f1a5a4d">00049</a> <a class="code" href="a00009.html#ac368f9b36ecd99747e57fac77f1a5a4d">TMainForm::KleisimoButtonButtonCollisionAreaClick</a>(TObject *Sender)
+<a name="l00050"></a>00050 {
+<a name="l00051"></a>00051   Close();
+<a name="l00052"></a>00052 }
+<a name="l00053"></a>00053 
+<a name="l00054"></a>00054 <span class="keywordtype">void</span> __fastcall
+<a name="l00055"></a><a class="code" href="a00009.html#af066f219b4aa5d46e0b30326be1e776a">00055</a> <a class="code" href="a00009.html#af066f219b4aa5d46e0b30326be1e776a">TMainForm::AstheneiaButtonButtonCollisionAreaClick</a>(TObject *Sender)
+<a name="l00056"></a>00056 {
+<a name="l00057"></a>00057   <a class="code" href="a00001.html">TAstheneiesForm</a> *frm = <span class="keyword">new</span> <a class="code" href="a00001.html">TAstheneiesForm</a>(<span class="keyword">this</span>);
+<a name="l00058"></a>00058   frm-&gt;ShowModal();
+<a name="l00059"></a>00059   <span class="keyword">delete</span> frm;
+<a name="l00060"></a>00060 }
+<a name="l00061"></a>00061 
+<a name="l00062"></a>00062 <span class="keywordtype">void</span> __fastcall
+<a name="l00063"></a><a class="code" href="a00009.html#a785e4b2b04d6baf7a67967c9bb62cfc9">00063</a> <a class="code" href="a00009.html#a785e4b2b04d6baf7a67967c9bb62cfc9">TMainForm::AsthenhsButtonButtonCollisionAreaClick</a>(TObject *Sender)
+<a name="l00064"></a>00064 {
+<a name="l00065"></a>00065   <a class="code" href="a00002.html">TAstheneisForm</a> *frm = <span class="keyword">new</span> <a class="code" href="a00002.html">TAstheneisForm</a>(<span class="keyword">this</span>);
+<a name="l00066"></a>00066   frm-&gt;ShowModal();
+<a name="l00067"></a>00067   <span class="keyword">delete</span> frm;
+<a name="l00068"></a>00068 }
+<a name="l00069"></a>00069 
+<a name="l00070"></a>00070 <span class="keywordtype">void</span> __fastcall
+<a name="l00071"></a><a class="code" href="a00009.html#a9d5219c6255da037a598457412e7bd36">00071</a> <a class="code" href="a00009.html#a9d5219c6255da037a598457412e7bd36">TMainForm::DiagnwshButtonButtonCollisionAreaClick</a>(TObject *Sender)
+<a name="l00072"></a>00072 {
+<a name="l00073"></a>00073   <a class="code" href="a00004.html">TDiagnwseisForm</a> *frm = <span class="keyword">new</span> <a class="code" href="a00004.html">TDiagnwseisForm</a>(<span class="keyword">this</span>);
+<a name="l00074"></a>00074   frm-&gt;ShowModal();
+<a name="l00075"></a>00075   <span class="keyword">delete</span> frm;
+<a name="l00076"></a>00076 }
+<a name="l00077"></a>00077 
+<a name="l00078"></a>00078 <span class="keywordtype">void</span> __fastcall
+<a name="l00079"></a><a class="code" href="a00009.html#ac10ecda0aed9994c31a59997e40c3288">00079</a> <a class="code" href="a00009.html#ac10ecda0aed9994c31a59997e40c3288">TMainForm::EksetashButtonButtonCollisionAreaClick</a>(TObject *Sender)
+<a name="l00080"></a>00080 {
+<a name="l00081"></a>00081   <a class="code" href="a00005.html">TEksetaseisForm</a> *frm = <span class="keyword">new</span> <a class="code" href="a00005.html">TEksetaseisForm</a>(<span class="keyword">this</span>);
+<a name="l00082"></a>00082   frm-&gt;ShowModal();
+<a name="l00083"></a>00083   <span class="keyword">delete</span> frm;
+<a name="l00084"></a>00084 }
+<a name="l00085"></a>00085 
+<a name="l00086"></a>00086 <span class="keywordtype">void</span> __fastcall
+<a name="l00087"></a><a class="code" href="a00009.html#afdf4a2c47e56b6293088cabf03056262">00087</a> <a class="code" href="a00009.html#afdf4a2c47e56b6293088cabf03056262">TMainForm::EpiskepseisButtonButtonCollisionAreaClick</a>(TObject *Sender)
+<a name="l00088"></a>00088 {
+<a name="l00089"></a>00089   <a class="code" href="a00006.html">TEpiskepseisForm</a> *frm = <span class="keyword">new</span> <a class="code" href="a00006.html">TEpiskepseisForm</a>(<span class="keyword">this</span>);
+<a name="l00090"></a>00090   frm-&gt;ShowModal();
+<a name="l00091"></a>00091   <span class="keyword">delete</span> frm;
+<a name="l00092"></a>00092 }
+<a name="l00093"></a>00093 
+<a name="l00094"></a>00094 <span class="keywordtype">void</span> __fastcall
+<a name="l00095"></a><a class="code" href="a00009.html#a06c2207ba9c388317838ded0d56e00b2">00095</a> <a class="code" href="a00009.html#a06c2207ba9c388317838ded0d56e00b2">TMainForm::FarmakaButtonButtonCollisionAreaClick</a>(TObject *Sender)
+<a name="l00096"></a>00096 {
+<a name="l00097"></a>00097   <a class="code" href="a00007.html">TFarmakaForm</a> *frm = <span class="keyword">new</span> <a class="code" href="a00007.html">TFarmakaForm</a>(<span class="keyword">this</span>);
+<a name="l00098"></a>00098   frm-&gt;ShowModal();
+<a name="l00099"></a>00099   <span class="keyword">delete</span> frm;
+<a name="l00100"></a>00100 }
+<a name="l00101"></a>00101 
+<a name="l00102"></a>00102 <span class="keywordtype">void</span> __fastcall
+<a name="l00103"></a><a class="code" href="a00009.html#a8109ce00f348af94078d6aaebfe72beb">00103</a> <a class="code" href="a00009.html#a8109ce00f348af94078d6aaebfe72beb">TMainForm::PerithalpshButtonButtonCollisionAreaClick</a>(TObject *Sender)
+<a name="l00104"></a>00104 {
+<a name="l00105"></a>00105   <a class="code" href="a00010.html">TPerithalpseisForm</a> *frm = <span class="keyword">new</span> <a class="code" href="a00010.html">TPerithalpseisForm</a>(<span class="keyword">this</span>);
+<a name="l00106"></a>00106   frm-&gt;ShowModal();
+<a name="l00107"></a>00107   <span class="keyword">delete</span> frm;
+<a name="l00108"></a>00108 }
+<a name="l00109"></a>00109 
+<a name="l00110"></a>00110 <span class="keywordtype">void</span> __fastcall
+<a name="l00111"></a><a class="code" href="a00009.html#a411e972839db7763ddfde57cf01b4ad5">00111</a> <a class="code" href="a00009.html#a411e972839db7763ddfde57cf01b4ad5">TMainForm::RantevouButtonButtonCollisionAreaClick</a>(TObject *Sender)
+<a name="l00112"></a>00112 {
+<a name="l00113"></a>00113   <a class="code" href="a00011.html">TRantevouForm</a> *frm = <span class="keyword">new</span> <a class="code" href="a00011.html">TRantevouForm</a>(<span class="keyword">this</span>);
+<a name="l00114"></a>00114   frm-&gt;ShowModal();
+<a name="l00115"></a>00115   <span class="keyword">delete</span> frm;
+<a name="l00116"></a>00116 }
+<a name="l00117"></a>00117 
+<a name="l00118"></a>00118 <span class="keywordtype">void</span> __fastcall
+<a name="l00119"></a><a class="code" href="a00009.html#aaaa3e800e1880d5af6a8ff2bfa3854d8">00119</a> <a class="code" href="a00009.html#aaaa3e800e1880d5af6a8ff2bfa3854d8">TMainForm::SindesmoiButtonButtonCollisionAreaClick</a>(TObject *Sender)
+<a name="l00120"></a>00120 {
+<a name="l00121"></a>00121   <a class="code" href="a00012.html">TSindesmoiForm</a> *frm = <span class="keyword">new</span> <a class="code" href="a00012.html">TSindesmoiForm</a>(<span class="keyword">this</span>);
+<a name="l00122"></a>00122   frm-&gt;ShowModal();
+<a name="l00123"></a>00123   <span class="keyword">delete</span> frm;
+<a name="l00124"></a>00124 }
+<a name="l00125"></a>00125 
+<a name="l00126"></a>00126 <span class="keywordtype">void</span> __fastcall
+<a name="l00127"></a><a class="code" href="a00009.html#a7839e045489570d233e5852b70885b9e">00127</a> <a class="code" href="a00009.html#a7839e045489570d233e5852b70885b9e">TMainForm::SintagografhshButtonButtonCollisionAreaClick</a>(TObject *Sender)
+<a name="l00128"></a>00128 {
+<a name="l00129"></a>00129   <a class="code" href="a00013.html">TSintagografhseisForm</a> *frm = <span class="keyword">new</span> <a class="code" href="a00013.html">TSintagografhseisForm</a>(<span class="keyword">this</span>);
+<a name="l00130"></a>00130   frm-&gt;ShowModal();
+<a name="l00131"></a>00131   <span class="keyword">delete</span> frm;
+<a name="l00132"></a>00132 }
+<a name="l00133"></a>00133 
+<a name="l00134"></a>00134 <span class="keywordtype">void</span> __fastcall
+<a name="l00135"></a><a class="code" href="a00009.html#a80201cb6cb0906c8da97719725207684">00135</a> <a class="code" href="a00009.html#a80201cb6cb0906c8da97719725207684">TMainForm::SxetikaButtonButtonCollisionAreaClick</a>(TObject *Sender)
+<a name="l00136"></a>00136 {
+<a name="l00137"></a>00137   <a class="code" href="a00015.html">TSxetikaForm</a> *frm = <span class="keyword">new</span> <a class="code" href="a00015.html">TSxetikaForm</a>(<span class="keyword">this</span>);
+<a name="l00138"></a>00138   frm-&gt;ShowModal();
+<a name="l00139"></a>00139   <span class="keyword">delete</span> frm;
+<a name="l00140"></a>00140 }
+<a name="l00141"></a>00141 
+<a name="l00142"></a>00142 <span class="keywordtype">int</span>
+<a name="l00143"></a><a class="code" href="a00009.html#aeee9cb0c5658543f527392c6e07eff0e">00143</a> <a class="code" href="a00009.html#aeee9cb0c5658543f527392c6e07eff0e">TMainForm::run_exe</a>(<span class="keywordtype">char</span> *app_file)
+<a name="l00144"></a>00144 {
+<a name="l00145"></a>00145    <span class="keywordflow">return</span> spawnl(P_DETACH, app_file, app_file, NULL);
+<a name="l00146"></a>00146 }
+<a name="l00147"></a>00147 
+<a name="l00148"></a>00148 <span class="keywordtype">void</span> __fastcall
+<a name="l00149"></a><a class="code" href="a00009.html#a1640cbcc203544809e08aeba95dbbb4e">00149</a> <a class="code" href="a00009.html#a1640cbcc203544809e08aeba95dbbb4e">TMainForm::VohtheiaButtonButtonCollisionAreaClick</a>(TObject *Sender)
+<a name="l00150"></a>00150 {
+<a name="l00151"></a>00151    AnsiString help_postfix = <span class="stringliteral">&quot;_hlp.exe&quot;</span>;
+<a name="l00152"></a>00152    AnsiString application_filename =
+<a name="l00153"></a>00153      ChangeFileExt(ExtractFileName(Application-&gt;ExeName), <span class="stringliteral">&quot;&quot;</span>);
+<a name="l00154"></a>00154 
+<a name="l00155"></a>00155    AnsiString help_file = application_filename + help_postfix;
+<a name="l00156"></a>00156 
+<a name="l00157"></a>00157    <span class="keywordflow">if</span> (<a class="code" href="a00009.html#aeee9cb0c5658543f527392c6e07eff0e">run_exe</a>(help_file.c_str()) == -1)
+<a name="l00158"></a>00158    {
+<a name="l00159"></a>00159      MessageBox(0,
+<a name="l00160"></a>00160                 <span class="stringliteral">&quot;Αδυναμία φόρτωσης του εγχειριδίου του προγράμματος.&quot;</span>,
+<a name="l00161"></a>00161                 <span class="stringliteral">&quot;Προειδοποιητικό Μήνυμα.&quot;</span>,
+<a name="l00162"></a>00162                 MB_OK|MB_ICONWARNING);
+<a name="l00163"></a>00163    }
+<a name="l00164"></a>00164 }
+<a name="l00165"></a>00165 
+</pre></div></div>
+<hr size="1"/><address style="text-align: right;"><small>Δημιουργήθηκε στις Wed Dec 23 03:11:28 2009 για "Πρόγραμμα Διαχείρισης Ιατρείου" από&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.1 </small></address>
+</body>
+</html>

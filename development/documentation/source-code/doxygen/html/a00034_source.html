@@ -1,0 +1,132 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>&quot;Πρόγραμμα Διαχείρισης Ιατρείου&quot;: Αρχείο κώδικα main_form.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- Δημιουργήθηκε από  Doxygen 1.6.1 -->
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul>
+      <li><a href="index.html"><span>Κύρια&nbsp;Σελίδα</span></a></li>
+      <li><a href="annotated.html"><span>Κλάσεις</span></a></li>
+      <li class="current"><a href="files.html"><span>Αρχεία</span></a></li>
+    </ul>
+  </div>
+  <div class="tabs">
+    <ul>
+      <li><a href="files.html"><span>Λίστα&nbsp;Αρχείων</span></a></li>
+      <li><a href="globals.html"><span>Μέλη&nbsp;Αρχείων</span></a></li>
+    </ul>
+  </div>
+<h1>main_form.h</h1><a href="a00034.html">Πήγαινε στην τεκμηρίωση του αρχείου.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="comment">/*</span>
+<a name="l00002"></a>00002 <span class="comment"> * Copyright (C) 2009 Geeks Developers.</span>
+<a name="l00003"></a>00003 <span class="comment"> *</span>
+<a name="l00004"></a>00004 <span class="comment"> * This program is free software: you can redistribute it and/or modify</span>
+<a name="l00005"></a>00005 <span class="comment"> * it under the terms of the GNU General Public License as published by</span>
+<a name="l00006"></a>00006 <span class="comment"> * the Free Software Foundation, either version 3 of the License, or</span>
+<a name="l00007"></a>00007 <span class="comment"> * (at your option) any later version.</span>
+<a name="l00008"></a>00008 <span class="comment"> *</span>
+<a name="l00009"></a>00009 <span class="comment"> * This program is distributed in the hope that it will be useful,</span>
+<a name="l00010"></a>00010 <span class="comment"> * but WITHOUT ANY WARRANTY; without even the implied warranty of</span>
+<a name="l00011"></a>00011 <span class="comment"> * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the</span>
+<a name="l00012"></a>00012 <span class="comment"> * GNU General Public License for more details.</span>
+<a name="l00013"></a>00013 <span class="comment"> *</span>
+<a name="l00014"></a>00014 <span class="comment"> * You should have received a copy of the GNU General Public License</span>
+<a name="l00015"></a>00015 <span class="comment"> * along with this program.  If not, see &lt;http://www.gnu.org/licenses/&gt;.</span>
+<a name="l00016"></a>00016 <span class="comment"> */</span>
+<a name="l00017"></a>00017 
+<a name="l00018"></a>00018 <span class="preprocessor">#ifndef main_formH</span>
+<a name="l00019"></a>00019 <span class="preprocessor"></span><span class="preprocessor">#define main_formH</span>
+<a name="l00020"></a>00020 <span class="preprocessor"></span>
+<a name="l00021"></a>00021 <span class="preprocessor">#include &lt;Classes.hpp&gt;</span>
+<a name="l00022"></a>00022 <span class="preprocessor">#include &lt;Controls.hpp&gt;</span>
+<a name="l00023"></a>00023 <span class="preprocessor">#include &lt;StdCtrls.hpp&gt;</span>
+<a name="l00024"></a>00024 <span class="preprocessor">#include &lt;Forms.hpp&gt;</span>
+<a name="l00025"></a>00025 <span class="preprocessor">#include &lt;ExtCtrls.hpp&gt;</span>
+<a name="l00026"></a>00026 <span class="preprocessor">#include &lt;jpeg.hpp&gt;</span>
+<a name="l00027"></a>00027 <span class="preprocessor">#include &quot;<a class="code" href="a00021.html">button_frame.h</a>&quot;</span>
+<a name="l00028"></a>00028 <span class="preprocessor">#include &lt;Menus.hpp&gt;</span>
+<a name="l00029"></a>00029 <span class="preprocessor">#include &lt;ImgList.hpp&gt;</span>
+<a name="l00030"></a>00030 <span class="preprocessor">#include &quot;trayicon.h&quot;</span>
+<a name="l00031"></a>00031 <span class="preprocessor">#include &lt;ADODB.hpp&gt;</span>
+<a name="l00032"></a>00032 <span class="preprocessor">#include &lt;DB.hpp&gt;</span>
+<a name="l00033"></a>00033 
+<a name="l00034"></a><a class="code" href="a00009.html">00034</a> <span class="keyword">class </span><a class="code" href="a00009.html">TMainForm</a> : <span class="keyword">public</span> TForm
+<a name="l00035"></a>00035 {
+<a name="l00036"></a>00036 __published:
+<a name="l00037"></a><a class="code" href="a00009.html#adb54055ffc57b7cdfea0d057df7be642">00037</a>         TImage *<a class="code" href="a00009.html#adb54055ffc57b7cdfea0d057df7be642">BackgroundImage</a>;
+<a name="l00038"></a><a class="code" href="a00009.html#a2a19c5f6060547280833fbb6df8bcbb2">00038</a>         TLabel *<a class="code" href="a00009.html#a2a19c5f6060547280833fbb6df8bcbb2">LabelOperationHint</a>;
+<a name="l00039"></a><a class="code" href="a00009.html#a44ceeacb56cb0df47bbae03eb042ea47">00039</a>         TMainMenu *<a class="code" href="a00009.html#a44ceeacb56cb0df47bbae03eb042ea47">MainFormMenu</a>;
+<a name="l00040"></a><a class="code" href="a00009.html#adb75d9f0f57ce79c5251b1348a4b30e8">00040</a>         TImageList *<a class="code" href="a00009.html#adb75d9f0f57ce79c5251b1348a4b30e8">MainFormMenuImageList</a>;
+<a name="l00041"></a><a class="code" href="a00009.html#a2219c44d8bc768f65e004429ac81bc10">00041</a>         TPopupMenu *<a class="code" href="a00009.html#a2219c44d8bc768f65e004429ac81bc10">TrayIconPopupMenu</a>;
+<a name="l00042"></a><a class="code" href="a00009.html#aa71c1a17e4f6709b483746aff6856d8f">00042</a>         TADOConnection *<a class="code" href="a00009.html#aa71c1a17e4f6709b483746aff6856d8f">ADOConnection</a>;
+<a name="l00043"></a><a class="code" href="a00009.html#a02a37b942a2f5d7e658a14b9325d67ce">00043</a>         TTrayIcon *<a class="code" href="a00009.html#a02a37b942a2f5d7e658a14b9325d67ce">TrayIcon</a>;
+<a name="l00044"></a>00044 
+<a name="l00045"></a><a class="code" href="a00009.html#ad5d1c80d461b6cf4162bf1469f128ac5">00045</a>         <a class="code" href="a00003.html">TButtonFrame</a> *<a class="code" href="a00009.html#ad5d1c80d461b6cf4162bf1469f128ac5">AsthenhsButton</a>;
+<a name="l00046"></a><a class="code" href="a00009.html#a196110b12f359f6c822f451b0b8b7e90">00046</a>         <a class="code" href="a00003.html">TButtonFrame</a> *<a class="code" href="a00009.html#a196110b12f359f6c822f451b0b8b7e90">EksetashButton</a>;
+<a name="l00047"></a><a class="code" href="a00009.html#aed6c53d0c819f4d6808558c06433e6f7">00047</a>         <a class="code" href="a00003.html">TButtonFrame</a> *<a class="code" href="a00009.html#aed6c53d0c819f4d6808558c06433e6f7">RantevouButton</a>;
+<a name="l00048"></a><a class="code" href="a00009.html#aa3c05b56aa23b8843268eafce3167df8">00048</a>         <a class="code" href="a00003.html">TButtonFrame</a> *<a class="code" href="a00009.html#aa3c05b56aa23b8843268eafce3167df8">FarmakaButton</a>;
+<a name="l00049"></a><a class="code" href="a00009.html#a0a01bafd46bbc7488bc50c0b0db0840b">00049</a>         <a class="code" href="a00003.html">TButtonFrame</a> *<a class="code" href="a00009.html#a0a01bafd46bbc7488bc50c0b0db0840b">PerithalpshButton</a>;
+<a name="l00050"></a><a class="code" href="a00009.html#a76b16023c82b4a8b6b1997d96fbdb85d">00050</a>         <a class="code" href="a00003.html">TButtonFrame</a> *<a class="code" href="a00009.html#a76b16023c82b4a8b6b1997d96fbdb85d">EpiskepseisButton</a>;
+<a name="l00051"></a><a class="code" href="a00009.html#aed231fe452d081d151702664e35c5422">00051</a>         <a class="code" href="a00003.html">TButtonFrame</a> *<a class="code" href="a00009.html#aed231fe452d081d151702664e35c5422">SintagografhshButton</a>;
+<a name="l00052"></a><a class="code" href="a00009.html#af6810932bb267260adada936f607b36d">00052</a>         <a class="code" href="a00003.html">TButtonFrame</a> *<a class="code" href="a00009.html#af6810932bb267260adada936f607b36d">SindesmoiButton</a>;
+<a name="l00053"></a><a class="code" href="a00009.html#a033fda0528a7fdae388f9d25820e7abb">00053</a>         <a class="code" href="a00003.html">TButtonFrame</a> *<a class="code" href="a00009.html#a033fda0528a7fdae388f9d25820e7abb">AstheneiaButton</a>;
+<a name="l00054"></a><a class="code" href="a00009.html#a9d9af96fb44da348289258085bd0ebb8">00054</a>         <a class="code" href="a00003.html">TButtonFrame</a> *<a class="code" href="a00009.html#a9d9af96fb44da348289258085bd0ebb8">VohtheiaButton</a>;
+<a name="l00055"></a><a class="code" href="a00009.html#a9666b0c8711b0ab18a745e9e5c28ac5c">00055</a>         <a class="code" href="a00003.html">TButtonFrame</a> *<a class="code" href="a00009.html#a9666b0c8711b0ab18a745e9e5c28ac5c">SxetikaButton</a>;
+<a name="l00056"></a><a class="code" href="a00009.html#a085215ef3055ee5b1d4f9bf2be0b95e3">00056</a>         <a class="code" href="a00003.html">TButtonFrame</a> *<a class="code" href="a00009.html#a085215ef3055ee5b1d4f9bf2be0b95e3">DiagnwshButton</a>;
+<a name="l00057"></a><a class="code" href="a00009.html#a064fe0fc9ce6403fb8b576ae1fd9aeb0">00057</a>         <a class="code" href="a00003.html">TButtonFrame</a> *<a class="code" href="a00009.html#a064fe0fc9ce6403fb8b576ae1fd9aeb0">KleisimoButton</a>;
+<a name="l00058"></a>00058 
+<a name="l00059"></a><a class="code" href="a00009.html#aca12d94806316b0b534f8bb1cd278a93">00059</a>         TMenuItem *<a class="code" href="a00009.html#aca12d94806316b0b534f8bb1cd278a93">N1</a>;
+<a name="l00060"></a><a class="code" href="a00009.html#a4aa14662726a0d08603e0f788f7dd611">00060</a>         TMenuItem *<a class="code" href="a00009.html#a4aa14662726a0d08603e0f788f7dd611">N2</a>;
+<a name="l00061"></a><a class="code" href="a00009.html#a0887cf74b8b471f7ee9c834a3ee37d67">00061</a>         TMenuItem *<a class="code" href="a00009.html#a0887cf74b8b471f7ee9c834a3ee37d67">N3</a>;
+<a name="l00062"></a><a class="code" href="a00009.html#a4c141041691ad924a34f47cc46020136">00062</a>         TMenuItem *<a class="code" href="a00009.html#a4c141041691ad924a34f47cc46020136">N4</a>;
+<a name="l00063"></a><a class="code" href="a00009.html#a67f53999b332c242cd2e57a437e676af">00063</a>         TMenuItem *<a class="code" href="a00009.html#a67f53999b332c242cd2e57a437e676af">N5</a>;
+<a name="l00064"></a><a class="code" href="a00009.html#af45a545442e3bab1614dc4ff9182f07e">00064</a>         TMenuItem *<a class="code" href="a00009.html#af45a545442e3bab1614dc4ff9182f07e">N6</a>;
+<a name="l00065"></a><a class="code" href="a00009.html#a9541b7448d18ed96ce6b5c1a50897adf">00065</a>         TMenuItem *<a class="code" href="a00009.html#a9541b7448d18ed96ce6b5c1a50897adf">N7</a>;
+<a name="l00066"></a><a class="code" href="a00009.html#af3a263e79ce2646b76a26d2ac0571c21">00066</a>         TMenuItem *<a class="code" href="a00009.html#af3a263e79ce2646b76a26d2ac0571c21">N8</a>;
+<a name="l00067"></a><a class="code" href="a00009.html#a9041309b32da13664e1985aaa22f9580">00067</a>         TMenuItem *<a class="code" href="a00009.html#a9041309b32da13664e1985aaa22f9580">N9</a>;
+<a name="l00068"></a><a class="code" href="a00009.html#a64c00628849c1ab35137d1566dece0c9">00068</a>         TMenuItem *<a class="code" href="a00009.html#a64c00628849c1ab35137d1566dece0c9">N10</a>;
+<a name="l00069"></a><a class="code" href="a00009.html#a177eaef2cf8bf58fa992b6072b98f594">00069</a>         TMenuItem *<a class="code" href="a00009.html#a177eaef2cf8bf58fa992b6072b98f594">N11</a>;
+<a name="l00070"></a><a class="code" href="a00009.html#a065a4e27412ba3091ecaaddc641b2dbb">00070</a>         TMenuItem *<a class="code" href="a00009.html#a065a4e27412ba3091ecaaddc641b2dbb">N12</a>;
+<a name="l00071"></a><a class="code" href="a00009.html#a81d22b4b9d85edd954599668fe8ebaed">00071</a>         TMenuItem *<a class="code" href="a00009.html#a81d22b4b9d85edd954599668fe8ebaed">N13</a>;
+<a name="l00072"></a><a class="code" href="a00009.html#a8c383254917eda82a18e5ade97c0c34a">00072</a>         TMenuItem *<a class="code" href="a00009.html#a8c383254917eda82a18e5ade97c0c34a">N14</a>;
+<a name="l00073"></a><a class="code" href="a00009.html#a130a68f8cb81a21ee6a55f0a7011a797">00073</a>         TMenuItem *<a class="code" href="a00009.html#a130a68f8cb81a21ee6a55f0a7011a797">N15</a>;
+<a name="l00074"></a><a class="code" href="a00009.html#a6fcbe9b67d1bef91a93b4276f89d2a61">00074</a>         TMenuItem *<a class="code" href="a00009.html#a6fcbe9b67d1bef91a93b4276f89d2a61">N16</a>;
+<a name="l00075"></a><a class="code" href="a00009.html#a58988c2b3e61e3c81a226c630ac1b04c">00075</a>         TMenuItem *<a class="code" href="a00009.html#a58988c2b3e61e3c81a226c630ac1b04c">N17</a>;
+<a name="l00076"></a><a class="code" href="a00009.html#ab5ac6bf3c93725fb39bbbece25981e7e">00076</a>         TMenuItem *<a class="code" href="a00009.html#ab5ac6bf3c93725fb39bbbece25981e7e">N18</a>;
+<a name="l00077"></a><a class="code" href="a00009.html#a0b57e5cd011516adfd74addfe0a469bc">00077</a>         TMenuItem *<a class="code" href="a00009.html#a0b57e5cd011516adfd74addfe0a469bc">N20</a>;
+<a name="l00078"></a><a class="code" href="a00009.html#ab6ea4d1978339334175ed17881b2e4cb">00078</a>         TMenuItem *<a class="code" href="a00009.html#ab6ea4d1978339334175ed17881b2e4cb">N21</a>;
+<a name="l00079"></a>00079 
+<a name="l00080"></a>00080         <span class="keywordtype">void</span> __fastcall <a class="code" href="a00009.html#ac368f9b36ecd99747e57fac77f1a5a4d">KleisimoButtonButtonCollisionAreaClick</a>(TObject *Sender);
+<a name="l00081"></a>00081         <span class="keywordtype">void</span> __fastcall <a class="code" href="a00009.html#af066f219b4aa5d46e0b30326be1e776a">AstheneiaButtonButtonCollisionAreaClick</a>(TObject *Sender);
+<a name="l00082"></a>00082         <span class="keywordtype">void</span> __fastcall <a class="code" href="a00009.html#a785e4b2b04d6baf7a67967c9bb62cfc9">AsthenhsButtonButtonCollisionAreaClick</a>(TObject *Sender);
+<a name="l00083"></a>00083         <span class="keywordtype">void</span> __fastcall <a class="code" href="a00009.html#a9d5219c6255da037a598457412e7bd36">DiagnwshButtonButtonCollisionAreaClick</a>(TObject *Sender);
+<a name="l00084"></a>00084         <span class="keywordtype">void</span> __fastcall <a class="code" href="a00009.html#ac10ecda0aed9994c31a59997e40c3288">EksetashButtonButtonCollisionAreaClick</a>(TObject *Sender);
+<a name="l00085"></a>00085         <span class="keywordtype">void</span> __fastcall <a class="code" href="a00009.html#afdf4a2c47e56b6293088cabf03056262">EpiskepseisButtonButtonCollisionAreaClick</a>(TObject *Sender);
+<a name="l00086"></a>00086         <span class="keywordtype">void</span> __fastcall <a class="code" href="a00009.html#a06c2207ba9c388317838ded0d56e00b2">FarmakaButtonButtonCollisionAreaClick</a>(TObject *Sender);
+<a name="l00087"></a>00087         <span class="keywordtype">void</span> __fastcall <a class="code" href="a00009.html#a8109ce00f348af94078d6aaebfe72beb">PerithalpshButtonButtonCollisionAreaClick</a>(TObject *Sender);
+<a name="l00088"></a>00088         <span class="keywordtype">void</span> __fastcall <a class="code" href="a00009.html#a411e972839db7763ddfde57cf01b4ad5">RantevouButtonButtonCollisionAreaClick</a>(TObject *Sender);
+<a name="l00089"></a>00089         <span class="keywordtype">void</span> __fastcall <a class="code" href="a00009.html#aaaa3e800e1880d5af6a8ff2bfa3854d8">SindesmoiButtonButtonCollisionAreaClick</a>(TObject *Sender);
+<a name="l00090"></a>00090         <span class="keywordtype">void</span> __fastcall <a class="code" href="a00009.html#a7839e045489570d233e5852b70885b9e">SintagografhshButtonButtonCollisionAreaClick</a>(TObject *Sender);
+<a name="l00091"></a>00091         <span class="keywordtype">void</span> __fastcall <a class="code" href="a00009.html#a80201cb6cb0906c8da97719725207684">SxetikaButtonButtonCollisionAreaClick</a>(TObject *Sender);
+<a name="l00092"></a>00092         <span class="keywordtype">void</span> __fastcall <a class="code" href="a00009.html#a1640cbcc203544809e08aeba95dbbb4e">VohtheiaButtonButtonCollisionAreaClick</a>(TObject *Sender);
+<a name="l00093"></a>00093 
+<a name="l00094"></a>00094 <span class="keyword">private</span>:
+<a name="l00095"></a>00095 <span class="keyword">public</span>:
+<a name="l00096"></a>00096         __fastcall <a class="code" href="a00009.html#a051eb0232ddc0151b03b316e38169f43">TMainForm</a>(TComponent* Owner);
+<a name="l00097"></a>00097         <span class="keywordtype">int</span> <a class="code" href="a00009.html#aeee9cb0c5658543f527392c6e07eff0e">run_exe</a>(<span class="keywordtype">char</span> *);
+<a name="l00098"></a>00098 };
+<a name="l00099"></a>00099 
+<a name="l00100"></a>00100 <span class="keyword">extern</span> PACKAGE <a class="code" href="a00009.html">TMainForm</a> *<a class="code" href="a00033.html#a3b98aac4b2e9ee78f47374681b349606">MainForm</a>;
+<a name="l00101"></a>00101 
+<a name="l00102"></a>00102 <span class="preprocessor">#endif</span>
+</pre></div></div>
+<hr size="1"/><address style="text-align: right;"><small>Δημιουργήθηκε στις Wed Dec 23 03:11:28 2009 για "Πρόγραμμα Διαχείρισης Ιατρείου" από&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.1 </small></address>
+</body>
+</html>
